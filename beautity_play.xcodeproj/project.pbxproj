@@ -31,6 +31,7 @@
 		2B556D211D1F801D0070F2AE /* firstPage_scrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B556D201D1F801D0070F2AE /* firstPage_scrollViewCell.m */; };
 		2B5CF4301D1D07A000DB00F2 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5CF42F1D1D07A000DB00F2 /* default@2x.png */; };
 		2B87C5C01D1FC629001954F1 /* searchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C5BF1D1FC629001954F1 /* searchView.m */; };
+		2BB4D5591D23BF820004BFA9 /* dynamicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D5581D23BF820004BFA9 /* dynamicTableViewCell.m */; };
 		5EDC7C1D2370AC9FF75FD571 /* libPods-beautity_play.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B7FA3587953CB9BD70FE /* libPods-beautity_play.a */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,8 @@
 		2B5CF42F1D1D07A000DB00F2 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
 		2B87C5BE1D1FC629001954F1 /* searchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchView.h; sourceTree = "<group>"; };
 		2B87C5BF1D1FC629001954F1 /* searchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchView.m; sourceTree = "<group>"; };
+		2BB4D5571D23BF820004BFA9 /* dynamicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamicTableViewCell.h; sourceTree = "<group>"; };
+		2BB4D5581D23BF820004BFA9 /* dynamicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dynamicTableViewCell.m; sourceTree = "<group>"; };
 		6DFBAE528D695359BE570FA8 /* Pods-beautity_play.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beautity_play.release.xcconfig"; path = "Pods/Target Support Files/Pods-beautity_play/Pods-beautity_play.release.xcconfig"; sourceTree = "<group>"; };
 		BE44B7FA3587953CB9BD70FE /* libPods-beautity_play.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beautity_play.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18DE250D3F3F594F840EE96 /* Pods-beautity_play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beautity_play.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beautity_play/Pods-beautity_play.debug.xcconfig"; sourceTree = "<group>"; };
@@ -322,6 +325,9 @@
 			children = (
 				2B0EC0841D1BE07400A2C866 /* dynamicViewController.h */,
 				2B0EC0851D1BE07400A2C866 /* dynamicViewController.m */,
+				2BB4D5501D23A3900004BFA9 /* controller */,
+				2BB4D54F1D23A3890004BFA9 /* view */,
+				2BB4D54E1D23A3830004BFA9 /* model */,
 			);
 			name = "动态";
 			sourceTree = "<group>";
@@ -359,6 +365,29 @@
 			sourceTree = "<group>";
 		};
 		2B556D0C1D1F65CB0070F2AE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		2BB4D54E1D23A3830004BFA9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		2BB4D54F1D23A3890004BFA9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2BB4D5571D23BF820004BFA9 /* dynamicTableViewCell.h */,
+				2BB4D5581D23BF820004BFA9 /* dynamicTableViewCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		2BB4D5501D23A3900004BFA9 /* controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -564,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB4D5591D23BF820004BFA9 /* dynamicTableViewCell.m in Sources */,
 				2B0EC08A1D1BE07400A2C866 /* nearViewController.m in Sources */,
 				2B0EC0721D1BDF9F00A2C866 /* ViewController.m in Sources */,
 				049781F81D21062200268AFC /* TopViewTableViewCell.m in Sources */,
