@@ -36,9 +36,25 @@
     [self.view addSubview:baseView];
     
     //输入框
-    UITextField * textfield = [[UITextField alloc]initWithFrame:CGRectMake(20, 30, width_screen-40, 44)];
-    textfield.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:textfield]; 
+    UIImageView * imageView_textfiled = [[UIImageView alloc]initWithFrame:CGRectMake(20,baseView.frame.origin.y + 30, width_screen-40, 88)];
+    imageView_textfiled.image = [UIImage imageNamed:@"yuanjiao-ju-xing"];
+    [self.view addSubview:imageView_textfiled];
+    //用户图标
+    UIImageView * accountImage = [[UIImageView alloc]initWithFrame:CGRectMake(imageView_textfiled.frame.origin.x+15, imageView_textfiled.frame.origin.y+15, 15, 15)];
+    accountImage.image = [UIImage imageNamed:@"Profile"];
+    [self.view addSubview:accountImage];
+    //用户输入框
+    UITextField * textfiledOne =[[UITextField alloc]initWithFrame:CGRectMake(accountImage.frame.origin.x + accountImage.frame.size.width+5, imageView_textfiled.frame.origin.y, imageView_textfiled.frame.size.width- (accountImage.frame.origin.x + accountImage.frame.size.width+5), imageView_textfiled.frame.size.height/2)];
+    textfiledOne.placeholder = @"手机号";
+    [self.view addSubview:textfiledOne];
+    //密码图标
+    UIImageView * passwordImage = [[UIImageView alloc]initWithFrame:CGRectMake(accountImage.frame.origin.x, imageView_textfiled.frame.origin.y+ imageView_textfiled.frame.size.height/2+15, 15, 15)];
+    passwordImage.image = [UIImage imageNamed:@"lock"];
+    [self.view addSubview:passwordImage];
+    //
+    UITextField * textfiledTwo = [[UITextField alloc]initWithFrame:CGRectMake(accountImage.frame.origin.x + accountImage.frame.size.width+5, imageView_textfiled.frame.origin.y + 44, imageView_textfiled.frame.size.width- (accountImage.frame.origin.x + accountImage.frame.size.width+5), imageView_textfiled.frame.size.height/2)];
+    textfiledTwo.placeholder = @"密码";
+    [self.view addSubview:textfiledTwo];
 }
 -(void)backPoPView:(UIButton *)sender
 {
