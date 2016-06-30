@@ -17,6 +17,8 @@
 @property (nonatomic, strong)UITableView *mineTableView;
 @property (nonatomic, strong)NSArray *dataSource;
 @property (nonatomic, strong)UIView *headView;
+@property (nonatomic, strong) UIView *clearView;
+@property (nonatomic, strong)UIView *editView;
 
 @end
 
@@ -33,9 +35,12 @@
     
     [self loadDatasource];
     
+    [self.view addSubview:self.clearView];
+    
     self.mineTableView.tableHeaderView = self.headView;
     
     [self creat_navigationView];
+    
     // Do any additional setup after loading the view.
 }
 - (void)creat_navigationView
@@ -45,7 +50,7 @@
     baseView.delegate = self;
     baseView.leftButton.hidden = YES;
     [baseView.rightButton setImage:[UIImage imageNamed:@"list_2"] forState:UIControlStateNormal];
-
+    
     [self.view addSubview:baseView];
 }
 
@@ -74,7 +79,7 @@
     
     NSArray *sectionArray = self.dataSource[indexPath.section];
     NSDictionary *dic = sectionArray[indexPath.row];
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    //    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.titleImage.image = [UIImage imageNamed:dic[@"image"]];
     cell.titleLabel.text = dic[@"title"];
@@ -158,21 +163,43 @@
 }
 -(void)rightButtonClick:(UIButton *)sender
 {
+    self.editView = [[UIView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-120, 55, 120, 40)];
+    self.editView.backgroundColor = [UIColor grayColor];
+    self.editView.layer.cornerRadius = 5;
+    self.editView.layer.masksToBounds = YES;
+    [self.view addSubview:self.editView];
+    
+    UIButton *opinitonBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120, 40)];
+    opinitonBtn.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [opinitonBtn addTarget:self action:@selector(touchOpinitonBtn) forControlEvents:UIControlEventTouchUpInside];
+    UIImageView *opinitonIg = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 20, 20)];
+    opinitonIg.image = [UIImage imageNamed:@"peiwan_close"];
+    UILabel *opinitonLab = [[UILabel alloc]initWithFrame:CGRectMake(opinitonIg.frame.origin.x+opinitonIg.frame.size.width+10, 10, 120, 20)];
+    opinitonLab.text = @"退出登录";
+    [opinitonBtn addSubview:opinitonIg];
+    [opinitonBtn addSubview:opinitonLab];
+    [self.editView addSubview:opinitonBtn];
+    
     NSLog(@"右");
 }
+
+-(void)touchOpinitonBtn{
+    NSLog(@"___退出登录");
+}
+
 #pragma mark----状态栏
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
 }
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
