@@ -21,5 +21,7 @@
 #import "dynamicViewController.h"
 #import "topViewController.h"
 #import "MyTabbar.h"
+#import "registerViewController.h"
+#import "loginViewController.h"
 
 #endif /* publicHeader_h */

@@ -10,4 +10,9 @@
 
 @implementation registerViewController
 
+-(void)viewDidLoad
+{
+    self.view.backgroundColor = [UIColor greenColor];
+}
+
 @end

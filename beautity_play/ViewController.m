@@ -51,18 +51,23 @@
     /**登陆按钮*/
     UIButton * loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     loginButton.frame = CGRectMake(registerButton.frame.size.width+registerButton.frame.origin.x + 40, registerButton.frame.origin.y, registerButton.frame.size.width, registerButton.frame.size.height) ;
-    [loginButton addTarget:self action:@selector(loginButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [loginButton addTarget:self action:@selector(loginButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [scrollView addSubview:loginButton];
 }
 /**注册*/
 - (void)registerButtonClick
 {
-    
+    registerViewController * registerVC = [[registerViewController alloc]init];
+    registerVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:registerVC animated:YES completion:nil];
 }
 /**登陆*/
 - (void)loginButtonClick
 {
-    
+    loginViewController * loginVC = [[loginViewController alloc]init];
+//    loginVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    loginVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:loginVC animated:YES completion:nil];
 }
 /**tableBar*/
 - (void)tabBarViewControllerCreat

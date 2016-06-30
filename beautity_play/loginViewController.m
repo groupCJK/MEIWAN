@@ -10,4 +10,10 @@
 
 @implementation loginViewController
 
+
+-(void)viewDidLoad
+{
+    self.view.backgroundColor = [UIColor grayColor];
+}
+
 @end
