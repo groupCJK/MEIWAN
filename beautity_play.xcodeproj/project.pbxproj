@@ -100,6 +100,7 @@
 		2B556D1F1D1F801D0070F2AE /* firstPage_scrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstPage_scrollViewCell.h; sourceTree = "<group>"; };
 		2B556D201D1F801D0070F2AE /* firstPage_scrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstPage_scrollViewCell.m; sourceTree = "<group>"; };
 		2B5CF42F1D1D07A000DB00F2 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		2B6AE7EE1D24BB7F00AE7783 /* MeiWan-ocSwift-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MeiWan-ocSwift-header.h"; sourceTree = "<group>"; };
 		2B87C5BE1D1FC629001954F1 /* searchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchView.h; sourceTree = "<group>"; };
 		2B87C5BF1D1FC629001954F1 /* searchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchView.m; sourceTree = "<group>"; };
 		2BB4D5571D23BF820004BFA9 /* dynamicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamicTableViewCell.h; sourceTree = "<group>"; };
@@ -250,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				2B0EC03A1D1BDF5800A2C866 /* main.m */,
+				2B6AE7EE1D24BB7F00AE7783 /* MeiWan-ocSwift-header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -763,7 +765,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mine.beautity-play";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "beautity_play/beautity_play-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "beautity_play/MeiWan-ocSwift-header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -782,7 +784,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mine.beautity-play";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "beautity_play/beautity_play-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "beautity_play/MeiWan-ocSwift-header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

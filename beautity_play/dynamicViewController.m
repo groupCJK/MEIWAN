@@ -10,6 +10,7 @@
 #import "headerName.pch"
 #import "CJKNavigationView.h"
 #import "dynamicTableViewCell.h"
+
 @interface dynamicViewController ()<CJKNavigationViewDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     UITableView * _tableView;
@@ -25,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self creat_navigationView];
     [self creat_tableView];
     // Do any additional setup after loading the view.

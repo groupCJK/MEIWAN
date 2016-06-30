@@ -15,4 +15,11 @@
 #import "CJKCollectionViewCell.h"
 #import "searchView.h"
 
+#import "nearViewController.h"
+#import "messageViewController.h"
+#import "mineViewController.h"
+#import "dynamicViewController.h"
+#import "topViewController.h"
+#import "MyTabbar.h"
+
 #endif /* publicHeader_h */
