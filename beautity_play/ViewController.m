@@ -51,7 +51,18 @@
     /**登陆按钮*/
     UIButton * loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     loginButton.frame = CGRectMake(registerButton.frame.size.width+registerButton.frame.origin.x + 40, registerButton.frame.origin.y, registerButton.frame.size.width, registerButton.frame.size.height) ;
+    [loginButton addTarget:self action:@selector(loginButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [scrollView addSubview:loginButton];
+}
+/**注册*/
+- (void)registerButtonClick
+{
+    
+}
+/**登陆*/
+- (void)loginButtonClick
+{
+    
 }
 /**tableBar*/
 - (void)tabBarViewControllerCreat
