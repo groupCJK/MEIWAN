@@ -1,9 +1,17 @@
-dependencies: \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/ViewController.m \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/ViewController.h \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/nearViewController.h \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/messageViewController.h \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/mineViewController.h \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/dynamicViewController.h \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/topViewController.h \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/MyTabbar.h
+dependencies: /Users/Mocmoc/MEIWAN/beautity_play/ViewController.m \
+  /Users/Mocmoc/MEIWAN/beautity_play/ViewController.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/publicHeader.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/stateView.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/firstPage_scrollViewCell.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/UICollectionViewWaterfallLayout.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/CJKCollectionViewCell.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/searchView.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/nearViewController.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/messageViewController.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/mineViewController.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/dynamicViewController.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/topViewController.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/MyTabbar.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/registerViewController.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/loginViewController.h \
+  /Users/Mocmoc/MEIWAN/beautity_play/headerName.pch

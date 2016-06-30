@@ -5,7 +5,6 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-<<<<<<< HEAD
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -22,8 +21,6 @@
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
-=======
->>>>>>> 84ac50d2bf058e9e8c33031fefe700f5759fab21
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -31,27 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-<<<<<<< HEAD
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B0EC04E1D1BDF5800A2C866"
-               BuildableName = "beautity_playTests.xctest"
-               BlueprintName = "beautity_playTests"
-               ReferencedContainer = "container:beautity_play.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B0EC0591D1BDF5800A2C866"
-               BuildableName = "beautity_playUITests.xctest"
-               BlueprintName = "beautity_playUITests"
-               ReferencedContainer = "container:beautity_play.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -62,9 +38,6 @@
             ReferencedContainer = "container:beautity_play.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-=======
-      </Testables>
->>>>>>> 84ac50d2bf058e9e8c33031fefe700f5759fab21
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -78,7 +51,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-<<<<<<< HEAD
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
@@ -89,8 +61,6 @@
             ReferencedContainer = "container:beautity_play.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-=======
->>>>>>> 84ac50d2bf058e9e8c33031fefe700f5759fab21
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -100,7 +70,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-<<<<<<< HEAD
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
@@ -111,8 +80,6 @@
             ReferencedContainer = "container:beautity_play.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-=======
->>>>>>> 84ac50d2bf058e9e8c33031fefe700f5759fab21
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

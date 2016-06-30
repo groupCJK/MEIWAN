@@ -1,3 +1,2 @@
-dependencies: \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/MineViewTableViewCell.m \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/MineViewTableViewCell.h
+dependencies: /Users/Mocmoc/MEIWAN/beautity_play/MineViewTableViewCell.m \
+  /Users/Mocmoc/MEIWAN/beautity_play/MineViewTableViewCell.h

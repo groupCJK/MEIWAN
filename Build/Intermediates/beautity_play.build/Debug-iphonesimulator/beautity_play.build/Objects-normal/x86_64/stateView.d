@@ -1,3 +1,2 @@
-dependencies: \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/stateView.m \
-  /Users/Mocmoc/Desktop/CJK_Mei_Wan-/beautity_play/stateView.h
+dependencies: /Users/Mocmoc/MEIWAN/beautity_play/stateView.m \
+  /Users/Mocmoc/MEIWAN/beautity_play/stateView.h
