@@ -11,8 +11,17 @@
 
 #define height_screen [UIScreen mainScreen].bounds.size.height
 #define width_screen [UIScreen mainScreen].bounds.size.width
+
 #define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
 #define baseColor [UIColor colorWithRed:215/255.0 green:215/255.0 blue:215/255.0 alpha:1]
+/**导航条背景色*/
+#define NavColor [UIColor colorWithRed:63/255.0 green:144/255.0 blue:164/255.0 alpha:1]
+
+
+/**字体大小*/
+#define Font(font) [UIFont systemFontOfSize:font]
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

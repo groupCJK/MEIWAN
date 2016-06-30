@@ -56,6 +56,7 @@
     if (!cell) {
         cell = [[dynamicTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
+    cell.MessageCount.text = @"100";
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

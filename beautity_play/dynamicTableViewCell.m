@@ -114,8 +114,7 @@
         messageLabel.font = [UIFont systemFontOfSize:10.0];
         messageLabel.text = @"120";
         CGSize messagesize = [messageLabel.text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:messageLabel.font,NSFontAttributeName, nil]];
-        messageLabel.center = CGPointMake(message.center.x + message.frame.size.width/2 + 10, message.center.y);
-        messageLabel.bounds = CGRectMake(0, 0, messagesize.width, messagesize.height);
+        messageLabel.frame = CGRectMake(message.frame.size.width+message.frame.origin.x + 3, message.center.y - messagesize.height/2, messagesize.width + 5, messagesize.height);
         messageLabel.textColor = RGB(181, 193, 193);
         [self addSubview:messageLabel];
         self.MessageCount = messageLabel;
