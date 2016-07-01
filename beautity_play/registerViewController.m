@@ -124,7 +124,7 @@
     
             if (textfiledTwo.text.length>6) {
                 //跳转获取验证码
-                NSDictionary * dic = [NSDictionary dictionaryWithObjectsAndKeys:textfiledOne,@"phone",textfiledTwo,@"password", nil];
+                NSDictionary * dic = [NSDictionary dictionaryWithObjectsAndKeys:textfiledOne.text,@"phone",textfiledTwo.text,@"password", nil];
                 NSUserDefaults * userdefaults = [NSUserDefaults standardUserDefaults];
                 [userdefaults setObject:dic forKey:@"registerAccount"];
                 [userdefaults synchronize];
