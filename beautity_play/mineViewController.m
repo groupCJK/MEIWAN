@@ -9,6 +9,7 @@
 #import "mineViewController.h"
 #import "headerName.pch"
 #import "CJKNavigationView.h"
+#import "UserInfoViewController.h"
 
 #import "MineViewTableViewCell.h"
 
@@ -88,6 +89,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row == 0){
+        UserInfoViewController *userInfoCtr = [[UserInfoViewController alloc] init];
+        userInfoCtr.title = @"个人资料";
+        [self presentViewController:userInfoCtr animated:YES completion:nil];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

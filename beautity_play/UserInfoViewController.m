@@ -9,7 +9,6 @@
 #import "UserInfoViewController.h"
 #import "pushAndDismissView.h"
 #import "UserInfoTableViewCell.h"
-#import "publicHeader.h"
 
 @interface UserInfoViewController ()<pushAndDismissViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
