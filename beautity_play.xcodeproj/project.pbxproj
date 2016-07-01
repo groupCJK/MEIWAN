@@ -356,6 +356,13 @@
 			name = "个人";
 			sourceTree = "<group>";
 		};
+		2B23ACB01D260E3300FE90EC /* NEXT ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "NEXT ViewController";
+			sourceTree = "<group>";
+		};
 		2B556D0A1D1F65AA0070F2AE /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +395,7 @@
 			children = (
 				2B6AE7F01D24EEBF00AE7783 /* registerViewController.h */,
 				2B6AE7F11D24EEBF00AE7783 /* registerViewController.m */,
+				2B23ACB01D260E3300FE90EC /* NEXT ViewController */,
 				2B23ACAD1D25041100FE90EC /* loginViewController.h */,
 				2B23ACAE1D25041100FE90EC /* loginViewController.m */,
 				2B6AE7F61D24FAC000AE7783 /* view */,

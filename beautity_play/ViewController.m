@@ -20,43 +20,71 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-    BOOL firstUse = [userDefaults boolForKey:@"firstUse"];
-    if (firstUse == YES) {
-        NSLog(@"1");
-    }else{
-        NSLog(@"0");
         [self creat_scrollView];
-    }
-//    [self tabBarViewControllerCreat];
-
 }
 -(void)creat_scrollView
 {
-    UIScrollView * scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, width_screen, height_screen)];
-    scrollView.contentSize = CGSizeMake(width_screen*4, 0);
-    scrollView.pagingEnabled = YES;
-    scrollView.showsHorizontalScrollIndicator = NO;
-    [self.view addSubview:scrollView];
-    for (int i = 0; i<4 ; i++) {
-        UIImageView * showImageView = [[UIImageView alloc]initWithFrame:CGRectMake(width_screen * i, 0, width_screen, height_screen)];
-        showImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"showImage%d",i+1]];
-        [scrollView addSubview:showImageView];
+    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+    BOOL firstUse = [userDefaults boolForKey:@"firstUse"];
+    NSString * usename = [userDefaults stringForKey:@"username"];
+    [userDefaults synchronize];
+    //判断是否第一次使用软件是展示引导图不是展示登陆页
+    if (firstUse == YES) {
+        
+        if (usename != nil) {
+            //如果本地查到用户账号则自动登录（发送请求）展示tabbar界面
+            
+            
+            [self tabBarViewControllerCreat];
+        }else{
+            //如果没查到则进入登陆注册界面
+            UIImageView * backGroundImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"showImage4"]];
+            backGroundImage.frame = CGRectMake(0, 0, width_screen, height_screen);
+            [self.view addSubview:backGroundImage];
+            
+            /**注册按钮*/
+            UIButton * registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            registerButton.frame = CGRectMake(20 , height_screen-110, 120, 44);
+            [registerButton addTarget:self action:@selector(registerButtonClick) forControlEvents:UIControlEventTouchUpInside];
+            [self.view addSubview:registerButton];
+            /**登陆按钮*/
+            UIButton * loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            loginButton.frame = CGRectMake(registerButton.frame.size.width+registerButton.frame.origin.x + 40, registerButton.frame.origin.y, registerButton.frame.size.width, registerButton.frame.size.height) ;
+            [loginButton addTarget:self action:@selector(loginButtonClick) forControlEvents:UIControlEventTouchUpInside];
+            [self.view addSubview:loginButton];
+        }
+        
+    }else{
+        UIScrollView * scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, width_screen, height_screen)];
+        scrollView.contentSize = CGSizeMake(width_screen*4, 0);
+        scrollView.pagingEnabled = YES;
+        scrollView.showsHorizontalScrollIndicator = NO;
+        [self.view addSubview:scrollView];
+        
+        for (int i = 0; i<4 ; i++) {
+            UIImageView * showImageView = [[UIImageView alloc]initWithFrame:CGRectMake(width_screen * i, 0, width_screen, height_screen)];
+            showImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"showImage%d",i+1]];
+            [scrollView addSubview:showImageView];
+        }
+        /**注册按钮*/
+        UIButton * registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        registerButton.frame = CGRectMake(20 + width_screen*3, height_screen-110, 120, 44);
+        [registerButton addTarget:self action:@selector(registerButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        [scrollView addSubview:registerButton];
+        /**登陆按钮*/
+        UIButton * loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        loginButton.frame = CGRectMake(registerButton.frame.size.width+registerButton.frame.origin.x + 40, registerButton.frame.origin.y, registerButton.frame.size.width, registerButton.frame.size.height) ;
+        [loginButton addTarget:self action:@selector(loginButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        [scrollView addSubview:loginButton];
+
     }
-    /**注册按钮*/
-    UIButton * registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    registerButton.frame = CGRectMake(20 + width_screen*3, height_screen-110, 120, 44);
-    [registerButton addTarget:self action:@selector(registerButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [scrollView addSubview:registerButton];
-    /**登陆按钮*/
-    UIButton * loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    loginButton.frame = CGRectMake(registerButton.frame.size.width+registerButton.frame.origin.x + 40, registerButton.frame.origin.y, registerButton.frame.size.width, registerButton.frame.size.height) ;
-    [loginButton addTarget:self action:@selector(loginButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [scrollView addSubview:loginButton];
-}
+
+    
+   }
 /**注册*/
 - (void)registerButtonClick
 {
+    [self firstUse];
     registerViewController * registerVC = [[registerViewController alloc]init];
     registerVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:registerVC animated:YES completion:nil];
@@ -64,10 +92,17 @@
 /**登陆*/
 - (void)loginButtonClick
 {
+    [self firstUse];
     loginViewController * loginVC = [[loginViewController alloc]init];
-//    loginVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     loginVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:loginVC animated:YES completion:nil];
+}
+/**写进本地*/
+- (void)firstUse
+{
+    NSUserDefaults * userdefaults = [NSUserDefaults standardUserDefaults];
+    [userdefaults setBool:YES forKey:@"firstUse"];
+    [userdefaults synchronize];
 }
 /**tableBar*/
 - (void)tabBarViewControllerCreat
