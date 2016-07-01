@@ -8,7 +8,6 @@
 
 #import "pushAndDismissView.h"
 
-#import "publicHeader.h"
 
 @implementation pushAndDismissView
 
