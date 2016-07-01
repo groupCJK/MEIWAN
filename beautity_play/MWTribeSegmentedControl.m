@@ -1,8 +1,8 @@
 //
-//  VPTribeSegmentedControl.m
+//  MWTribeSegmentedControl.m
 //  beautity_play
 //
-//  Created by 钟伟迪 on 15/6/17.
+//  Created by FoxZhou on 15/6/17.
 //  Copyright (c) 2015年 zjh. All rights reserved.
 //
 
@@ -16,9 +16,9 @@ _Pragma("clang diagnostic pop") \
 } while (0)
 
 
-#import "VPTribeSegmentedControl.h"
+#import "MWTribeSegmentedControl.h"
 
-@implementation VPTribeSegmentedControl{
+@implementation MWTribeSegmentedControl{
     CALayer * _btmLayer;
     SEL _sel;
     id  _target;
@@ -64,7 +64,7 @@ _Pragma("clang diagnostic pop") \
 
 - (UIColor *)tintColor{
     if (!_tintColor) {
-        _tintColor = vpMainColor;
+        _tintColor = NavColor;
     }
    return  _tintColor;
 }
