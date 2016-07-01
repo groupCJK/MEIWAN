@@ -1,4 +1,5 @@
 dependencies: /Users/Mocmoc/MEIWAN/beautity_play/registerViewController.m \
+  /Users/Mocmoc/MEIWAN/beautity_play/headerName.pch \
   /Users/Mocmoc/MEIWAN/beautity_play/registerViewController.h \
   /Users/Mocmoc/MEIWAN/beautity_play/publicHeader.h \
   /Users/Mocmoc/MEIWAN/beautity_play/stateView.h \
@@ -14,5 +15,4 @@ dependencies: /Users/Mocmoc/MEIWAN/beautity_play/registerViewController.m \
   /Users/Mocmoc/MEIWAN/beautity_play/topViewController.h \
   /Users/Mocmoc/MEIWAN/beautity_play/MyTabbar.h \
   /Users/Mocmoc/MEIWAN/beautity_play/loginViewController.h \
-  /Users/Mocmoc/MEIWAN/beautity_play/headerName.pch \
   /Users/Mocmoc/MEIWAN/beautity_play/pushAndDismissView.h

@@ -1,7 +1,7 @@
 dependencies: /Users/Mocmoc/MEIWAN/beautity_play/nearViewController.m \
+  /Users/Mocmoc/MEIWAN/beautity_play/headerName.pch \
   /Users/Mocmoc/MEIWAN/beautity_play/nearViewController.h \
   /Users/Mocmoc/MEIWAN/beautity_play/CJKNavigationView.h \
-  /Users/Mocmoc/MEIWAN/beautity_play/headerName.pch \
   /Users/Mocmoc/MEIWAN/beautity_play/publicHeader.h \
   /Users/Mocmoc/MEIWAN/beautity_play/stateView.h \
   /Users/Mocmoc/MEIWAN/beautity_play/firstPage_scrollViewCell.h \
