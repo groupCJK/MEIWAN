@@ -9,6 +9,25 @@
 #ifndef headerName_pch
 #define headerName_pch
 
+#import "publicHeader.h"
+#import "stateView.h"
+#import "CJKNavigationView.h"
+#import "firstPage_scrollViewCell.h"
+#import "UICollectionViewWaterfallLayout.h"
+#import "CJKCollectionViewCell.h"
+#import "searchView.h"
+
+#import "nearViewController.h"
+#import "messageViewController.h"
+#import "mineViewController.h"
+#import "dynamicViewController.h"
+#import "topViewController.h"
+#import "MyTabbar.h"
+#import "registerViewController.h"
+#import "loginViewController.h"
+#import "pushAndDismissView.h"
+#import "getNumberViewController.h"
+
 #define height_screen [UIScreen mainScreen].bounds.size.height
 #define width_screen [UIScreen mainScreen].bounds.size.width
 

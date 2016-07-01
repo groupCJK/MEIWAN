@@ -125,6 +125,8 @@
             [self showMessage:@"手机号码正确"];
             if (textfiledTwo.text.length>6) {
                 //跳转获取验证码
+                getNumberViewController * getnumber = [[getNumberViewController alloc]init];
+                [self.navigationController pushViewController:getnumber animated:YES];
                 
             }else{
                 [self showMessage:@"密码太过简短不安全"];
