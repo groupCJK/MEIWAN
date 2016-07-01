@@ -18,6 +18,7 @@
 @interface pushAndDismissView : UIView
 
 @property(nonatomic,retain)UILabel * titleLabel;
+@property(nonatomic,retain)UIButton *finished;
 @property(nonatomic,weak)id<pushAndDismissViewDelegate>delegate;
 
 @end
