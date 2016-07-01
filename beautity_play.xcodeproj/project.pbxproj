@@ -29,6 +29,7 @@
 		2B0EC08D1D1BE07400A2C866 /* dynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0851D1BE07400A2C866 /* dynamicViewController.m */; };
 		2B0EC08E1D1BE07400A2C866 /* topViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC0871D1BE07400A2C866 /* topViewController.m */; };
 		2B23ACAF1D25041100FE90EC /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B23ACAE1D25041100FE90EC /* loginViewController.m */; };
+		2B23ACB31D265FE600FE90EC /* getNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B23ACB21D265FE600FE90EC /* getNumberViewController.m */; };
 		2B556D121D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B556D111D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m */; };
 		2B556D1E1D1F6F320070F2AE /* CJKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B556D1D1D1F6F320070F2AE /* CJKCollectionViewCell.m */; };
 		2B556D211D1F801D0070F2AE /* firstPage_scrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B556D201D1F801D0070F2AE /* firstPage_scrollViewCell.m */; };
@@ -104,6 +105,8 @@
 		2B0EC0871D1BE07400A2C866 /* topViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topViewController.m; sourceTree = "<group>"; };
 		2B23ACAD1D25041100FE90EC /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		2B23ACAE1D25041100FE90EC /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		2B23ACB11D265FE600FE90EC /* getNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getNumberViewController.h; sourceTree = "<group>"; };
+		2B23ACB21D265FE600FE90EC /* getNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getNumberViewController.m; sourceTree = "<group>"; };
 		2B556D101D1F681F0070F2AE /* UICollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		2B556D111D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		2B556D1C1D1F6F320070F2AE /* CJKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJKCollectionViewCell.h; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 		2B23ACB01D260E3300FE90EC /* NEXT ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2B23ACB11D265FE600FE90EC /* getNumberViewController.h */,
+				2B23ACB21D265FE600FE90EC /* getNumberViewController.m */,
 			);
 			name = "NEXT ViewController";
 			sourceTree = "<group>";
@@ -664,6 +669,7 @@
 				2B0EC08C1D1BE07400A2C866 /* mineViewController.m in Sources */,
 				27A65AFF1D264D8F0060D6B9 /* UserInfoViewController.m in Sources */,
 				0414CC3F1D2270A40099FE61 /* MineViewTableViewCell.m in Sources */,
+				2B23ACB31D265FE600FE90EC /* getNumberViewController.m in Sources */,
 				2B0EC08D1D1BE07400A2C866 /* dynamicViewController.m in Sources */,
 				2B556D121D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m in Sources */,
 				2B556D1E1D1F6F320070F2AE /* CJKCollectionViewCell.m in Sources */,

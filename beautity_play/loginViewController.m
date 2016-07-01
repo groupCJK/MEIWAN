@@ -40,18 +40,22 @@
     UIImageView * imageView_textfiled = [[UIImageView alloc]initWithFrame:CGRectMake(20,baseView.frame.origin.y + 30, width_screen-40, 88)];
     imageView_textfiled.image = [UIImage imageNamed:@"yuanjiao-ju-xing"];
     [self.view addSubview:imageView_textfiled];
+    
     //用户图标
     UIImageView * accountImage = [[UIImageView alloc]initWithFrame:CGRectMake(imageView_textfiled.frame.origin.x+15, imageView_textfiled.frame.origin.y+15, 15, 15)];
     accountImage.image = [UIImage imageNamed:@"Profile"];
     [self.view addSubview:accountImage];
+    
     //用户输入框
     UITextField * textfiledOne =[[UITextField alloc]initWithFrame:CGRectMake(accountImage.frame.origin.x + accountImage.frame.size.width+5, imageView_textfiled.frame.origin.y, imageView_textfiled.frame.size.width- (accountImage.frame.origin.x + accountImage.frame.size.width+5), imageView_textfiled.frame.size.height/2)];
     textfiledOne.placeholder = @"手机号";
     [self.view addSubview:textfiledOne];
+    
     //密码图标
     UIImageView * passwordImage = [[UIImageView alloc]initWithFrame:CGRectMake(accountImage.frame.origin.x, imageView_textfiled.frame.origin.y+ imageView_textfiled.frame.size.height/2+15, 15, 15)];
     passwordImage.image = [UIImage imageNamed:@"lock"];
     [self.view addSubview:passwordImage];
+    
     //密码输入框
     UITextField * textfiledTwo = [[UITextField alloc]initWithFrame:CGRectMake(accountImage.frame.origin.x + accountImage.frame.size.width+5, imageView_textfiled.frame.origin.y + 44, imageView_textfiled.frame.size.width- (accountImage.frame.origin.x + accountImage.frame.size.width+5), imageView_textfiled.frame.size.height/2)];
     textfiledTwo.placeholder = @"密码";
@@ -59,7 +63,6 @@
     
     //登录按钮
     UIButton * loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-
     loginButton.backgroundColor = RGB(125, 186, 201);
     loginButton.layer.cornerRadius = 5;
     loginButton.alpha = 0.55;
@@ -75,6 +78,7 @@
     NSLog(@"完成");
     [self.view endEditing:YES];
 }
+
 -(void)loginAction:(UIButton *)sender
 {
     NSLog(@"登录");
@@ -93,8 +97,6 @@
     topViewController * vc2 = [[topViewController alloc]init];
     messageViewController * vc3 = [[messageViewController alloc]init];
     mineViewController * vc4 = [[mineViewController alloc]init];
-    
-    //    self.navigationController.na
     
     UINavigationController * mainPage = [[UINavigationController alloc]initWithRootViewController:vc];
     mainPage.navigationBar.backgroundColor = [UIColor blackColor];
@@ -131,7 +133,6 @@
     
     tabBarController.viewControllers = @[mainPage,goodsPage,latestPage,shopCarPage,myPage];
     
-    
     [UIApplication sharedApplication].delegate.window.rootViewController = tabBarController;
     self.navigationController.navigationBarHidden = YES;
     //改变tabbarItem的默认位置
@@ -139,8 +140,6 @@
     UITabBarItem * tabbarItem3 = [tabbar.items objectAtIndex:2];
     tabbarItem3.imageInsets = UIEdgeInsetsMake(-3, 0, 3, 0);
     tabBarController.tabBar.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-40 , [UIScreen mainScreen].bounds.size.width, 40);
-    
-    
 }
 
 #pragma mark----状态栏
