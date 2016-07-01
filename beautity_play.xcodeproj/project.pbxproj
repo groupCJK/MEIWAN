@@ -12,7 +12,7 @@
 		049781F81D21062200268AFC /* TopViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049781F71D21062200268AFC /* TopViewTableViewCell.m */; };
 		27A65AFF1D264D8F0060D6B9 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */; };
 		27A65B021D264DA60060D6B9 /* UserInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */; };
-		27A65B051D2660AA0060D6B9 /* VPTribeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65B031D2660A90060D6B9 /* VPTribeSegmentedControl.m */; };
+		27A65B051D2660AA0060D6B9 /* MWTribeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65B031D2660A90060D6B9 /* MWTribeSegmentedControl.m */; };
 		2B0AC8621D1D2A17009E953F /* stateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0AC8611D1D2A17009E953F /* stateView.m */; };
 		2B0EC03B1D1BDF5800A2C866 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC03A1D1BDF5800A2C866 /* main.m */; };
 		2B0EC0441D1BDF5800A2C866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0EC0421D1BDF5800A2C866 /* Main.storyboard */; };
@@ -70,8 +70,8 @@
 		27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		27A65B001D264DA60060D6B9 /* UserInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTableViewCell.h; sourceTree = "<group>"; };
 		27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoTableViewCell.m; sourceTree = "<group>"; };
-		27A65B031D2660A90060D6B9 /* VPTribeSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPTribeSegmentedControl.m; sourceTree = "<group>"; };
-		27A65B041D2660A90060D6B9 /* VPTribeSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPTribeSegmentedControl.h; sourceTree = "<group>"; };
+		27A65B031D2660A90060D6B9 /* MWTribeSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTribeSegmentedControl.m; sourceTree = "<group>"; };
+		27A65B041D2660A90060D6B9 /* MWTribeSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTribeSegmentedControl.h; sourceTree = "<group>"; };
 		2B0AC8601D1D2A17009E953F /* stateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stateView.h; sourceTree = "<group>"; };
 		2B0AC8611D1D2A17009E953F /* stateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stateView.m; sourceTree = "<group>"; };
 		2B0AC8631D1D2AAF009E953F /* publicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = publicHeader.h; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 		0414CC411D235C6B0099FE61 /* helper */ = {
 			isa = PBXGroup;
 			children = (
-				27A65B031D2660A90060D6B9 /* VPTribeSegmentedControl.m */,
-				27A65B041D2660A90060D6B9 /* VPTribeSegmentedControl.h */,
+				27A65B041D2660A90060D6B9 /* MWTribeSegmentedControl.h */,
+				27A65B031D2660A90060D6B9 /* MWTribeSegmentedControl.m */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -657,7 +657,7 @@
 				2BB4D5591D23BF820004BFA9 /* dynamicTableViewCell.m in Sources */,
 				2B0EC08A1D1BE07400A2C866 /* nearViewController.m in Sources */,
 				2B0EC0721D1BDF9F00A2C866 /* ViewController.m in Sources */,
-				27A65B051D2660AA0060D6B9 /* VPTribeSegmentedControl.m in Sources */,
+				27A65B051D2660AA0060D6B9 /* MWTribeSegmentedControl.m in Sources */,
 				2B6AE7F21D24EEBF00AE7783 /* registerViewController.m in Sources */,
 				2B23ACAF1D25041100FE90EC /* loginViewController.m in Sources */,
 				049781F81D21062200268AFC /* TopViewTableViewCell.m in Sources */,
