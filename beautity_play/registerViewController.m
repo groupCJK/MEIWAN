@@ -114,7 +114,6 @@
 }
 -(void)registerAction:(UIButton *)sender
 {
-    NSLog(@"下一步%@---%@",textfiledOne.text,textfiledTwo.text);
 
     if ([textfiledOne.text isEqualToString:@""]||[textfiledTwo.text isEqualToString:@""]) {
         [self showMessage:@"手机号码或密码为空"];
@@ -122,9 +121,13 @@
         NSString * regex = @"^(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$";
         NSPredicate * predicate = [NSPredicate predicateWithFormat:@"self matches %@",regex];
         if ([predicate evaluateWithObject:textfiledOne.text]) {
-            [self showMessage:@"手机号码正确"];
+    
             if (textfiledTwo.text.length>6) {
                 //跳转获取验证码
+                NSDictionary * dic = [NSDictionary dictionaryWithObjectsAndKeys:textfiledOne,@"phone",textfiledTwo,@"password", nil];
+                NSUserDefaults * userdefaults = [NSUserDefaults standardUserDefaults];
+                [userdefaults setObject:dic forKey:@"registerAccount"];
+                [userdefaults synchronize];
                 getNumberViewController * getnumber = [[getNumberViewController alloc]init];
                 [self.navigationController pushViewController:getnumber animated:YES];
                 

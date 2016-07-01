@@ -12,6 +12,10 @@
 
 -(void)viewDidLoad
 {
+    NSUserDefaults * userdefaults = [NSUserDefaults standardUserDefaults];
+   NSDictionary * dic = [[NSDictionary alloc]initWithDictionary: [userdefaults objectForKey:@"registerAccount"]];
+    NSLog(@"%@",dic);
+    [userdefaults synchronize];
     pushAndDismissView * topView = [[pushAndDismissView alloc]initWithFrame:CGRectMake(0, 20, width_screen, 40)];
     [self.view addSubview:topView];
 }
