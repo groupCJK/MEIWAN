@@ -10,6 +10,8 @@
 		0414CC3A1D2239D70099FE61 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414CC391D2239D70099FE61 /* MessageTableViewCell.m */; };
 		0414CC3F1D2270A40099FE61 /* MineViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0414CC3E1D2270A40099FE61 /* MineViewTableViewCell.m */; };
 		049781F81D21062200268AFC /* TopViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049781F71D21062200268AFC /* TopViewTableViewCell.m */; };
+		27A65AFF1D264D8F0060D6B9 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */; };
+		27A65B021D264DA60060D6B9 /* UserInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */; };
 		2B0AC8621D1D2A17009E953F /* stateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0AC8611D1D2A17009E953F /* stateView.m */; };
 		2B0EC03B1D1BDF5800A2C866 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC03A1D1BDF5800A2C866 /* main.m */; };
 		2B0EC0441D1BDF5800A2C866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0EC0421D1BDF5800A2C866 /* Main.storyboard */; };
@@ -62,6 +64,10 @@
 		0414CC3E1D2270A40099FE61 /* MineViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewTableViewCell.m; sourceTree = "<group>"; };
 		049781F61D21062200268AFC /* TopViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewTableViewCell.h; sourceTree = "<group>"; };
 		049781F71D21062200268AFC /* TopViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewTableViewCell.m; sourceTree = "<group>"; };
+		27A65AFD1D264D8F0060D6B9 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		27A65B001D264DA60060D6B9 /* UserInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTableViewCell.h; sourceTree = "<group>"; };
+		27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoTableViewCell.m; sourceTree = "<group>"; };
 		2B0AC8601D1D2A17009E953F /* stateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stateView.h; sourceTree = "<group>"; };
 		2B0AC8611D1D2A17009E953F /* stateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stateView.m; sourceTree = "<group>"; };
 		2B0AC8631D1D2AAF009E953F /* publicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = publicHeader.h; sourceTree = "<group>"; };
@@ -166,6 +172,8 @@
 			children = (
 				0414CC3D1D2270A40099FE61 /* MineViewTableViewCell.h */,
 				0414CC3E1D2270A40099FE61 /* MineViewTableViewCell.m */,
+				27A65B001D264DA60060D6B9 /* UserInfoTableViewCell.h */,
+				27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -173,6 +181,8 @@
 		0414CC3C1D2270810099FE61 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27A65AFD1D264D8F0060D6B9 /* UserInfoViewController.h */,
+				27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -634,6 +644,7 @@
 				049781F81D21062200268AFC /* TopViewTableViewCell.m in Sources */,
 				2B0EC08B1D1BE07400A2C866 /* messageViewController.m in Sources */,
 				2B87C5C01D1FC629001954F1 /* searchView.m in Sources */,
+				27A65B021D264DA60060D6B9 /* UserInfoTableViewCell.m in Sources */,
 				2B6AE7F91D24FAF300AE7783 /* pushAndDismissView.m in Sources */,
 				2B0EC0711D1BDF9F00A2C866 /* AppDelegate.m in Sources */,
 				2B0EC03B1D1BDF5800A2C866 /* main.m in Sources */,
@@ -643,6 +654,7 @@
 				2B0EC08E1D1BE07400A2C866 /* topViewController.m in Sources */,
 				2B0EC0881D1BE07400A2C866 /* MyTabbar.m in Sources */,
 				2B0EC08C1D1BE07400A2C866 /* mineViewController.m in Sources */,
+				27A65AFF1D264D8F0060D6B9 /* UserInfoViewController.m in Sources */,
 				0414CC3F1D2270A40099FE61 /* MineViewTableViewCell.m in Sources */,
 				2B0EC08D1D1BE07400A2C866 /* dynamicViewController.m in Sources */,
 				2B556D121D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m in Sources */,

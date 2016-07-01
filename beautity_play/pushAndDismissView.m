@@ -43,6 +43,7 @@
         finished.frame = CGRectMake(width_screen-12-40, 0, 40, frame.size.height);
         [finished addTarget:self action:@selector(finishedClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:finished];
+        self.finished = finished;
         
         UILabel * label = [[UILabel alloc]init];
         label.font = Font(18.0);
