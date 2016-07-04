@@ -9,6 +9,8 @@
 #import "mineViewController.h"
 #import "headerName.pch"
 #import "CJKNavigationView.h"
+
+#import "RecordCenterViewController.h"
 #import "UserInfoViewController.h"
 
 #import "MineViewTableViewCell.h"
@@ -93,6 +95,10 @@
         UserInfoViewController *userInfoCtr = [[UserInfoViewController alloc] init];
         userInfoCtr.title = @"个人资料";
         [self presentViewController:userInfoCtr animated:YES completion:nil];
+    }else if (indexPath.row == 4){
+        RecordCenterViewController *recordCtr = [[RecordCenterViewController alloc] init];
+        recordCtr.title = @"纪录中心";
+        [self presentViewController:recordCtr animated:YES completion:nil];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

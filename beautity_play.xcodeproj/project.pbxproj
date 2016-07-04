@@ -13,6 +13,10 @@
 		27A65AFF1D264D8F0060D6B9 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */; };
 		27A65B021D264DA60060D6B9 /* UserInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */; };
 		27A65B051D2660AA0060D6B9 /* MWTribeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65B031D2660A90060D6B9 /* MWTribeSegmentedControl.m */; };
+		27D5A96A1D2A648C005D258E /* RecordCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5A9651D2A648C005D258E /* RecordCenterViewController.m */; };
+		27D5A96B1D2A648C005D258E /* MyRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5A9671D2A648C005D258E /* MyRecordViewController.m */; };
+		27D5A96C1D2A648C005D258E /* InvitatianMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5A9691D2A648C005D258E /* InvitatianMyViewController.m */; };
+		27D5A96F1D2A64A0005D258E /* InvitatianMyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5A96E1D2A64A0005D258E /* InvitatianMyTableViewCell.m */; };
 		2B0AC8621D1D2A17009E953F /* stateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0AC8611D1D2A17009E953F /* stateView.m */; };
 		2B0EC03B1D1BDF5800A2C866 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EC03A1D1BDF5800A2C866 /* main.m */; };
 		2B0EC0441D1BDF5800A2C866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0EC0421D1BDF5800A2C866 /* Main.storyboard */; };
@@ -72,6 +76,14 @@
 		27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoTableViewCell.m; sourceTree = "<group>"; };
 		27A65B031D2660A90060D6B9 /* MWTribeSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTribeSegmentedControl.m; sourceTree = "<group>"; };
 		27A65B041D2660A90060D6B9 /* MWTribeSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTribeSegmentedControl.h; sourceTree = "<group>"; };
+		27D5A9641D2A648C005D258E /* RecordCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordCenterViewController.h; sourceTree = "<group>"; };
+		27D5A9651D2A648C005D258E /* RecordCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordCenterViewController.m; sourceTree = "<group>"; };
+		27D5A9661D2A648C005D258E /* MyRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecordViewController.h; sourceTree = "<group>"; };
+		27D5A9671D2A648C005D258E /* MyRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRecordViewController.m; sourceTree = "<group>"; };
+		27D5A9681D2A648C005D258E /* InvitatianMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitatianMyViewController.h; sourceTree = "<group>"; };
+		27D5A9691D2A648C005D258E /* InvitatianMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitatianMyViewController.m; sourceTree = "<group>"; };
+		27D5A96D1D2A64A0005D258E /* InvitatianMyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvitatianMyTableViewCell.h; sourceTree = "<group>"; };
+		27D5A96E1D2A64A0005D258E /* InvitatianMyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvitatianMyTableViewCell.m; sourceTree = "<group>"; };
 		2B0AC8601D1D2A17009E953F /* stateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stateView.h; sourceTree = "<group>"; };
 		2B0AC8611D1D2A17009E953F /* stateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stateView.m; sourceTree = "<group>"; };
 		2B0AC8631D1D2AAF009E953F /* publicHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = publicHeader.h; sourceTree = "<group>"; };
@@ -180,6 +192,8 @@
 				0414CC3E1D2270A40099FE61 /* MineViewTableViewCell.m */,
 				27A65B001D264DA60060D6B9 /* UserInfoTableViewCell.h */,
 				27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */,
+				27D5A96D1D2A64A0005D258E /* InvitatianMyTableViewCell.h */,
+				27D5A96E1D2A64A0005D258E /* InvitatianMyTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -189,6 +203,12 @@
 			children = (
 				27A65AFD1D264D8F0060D6B9 /* UserInfoViewController.h */,
 				27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */,
+				27D5A9641D2A648C005D258E /* RecordCenterViewController.h */,
+				27D5A9651D2A648C005D258E /* RecordCenterViewController.m */,
+				27D5A9661D2A648C005D258E /* MyRecordViewController.h */,
+				27D5A9671D2A648C005D258E /* MyRecordViewController.m */,
+				27D5A9681D2A648C005D258E /* InvitatianMyViewController.h */,
+				27D5A9691D2A648C005D258E /* InvitatianMyViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -657,13 +677,17 @@
 				2BB4D5591D23BF820004BFA9 /* dynamicTableViewCell.m in Sources */,
 				2B0EC08A1D1BE07400A2C866 /* nearViewController.m in Sources */,
 				2B0EC0721D1BDF9F00A2C866 /* ViewController.m in Sources */,
+				27D5A96B1D2A648C005D258E /* MyRecordViewController.m in Sources */,
+				27D5A96A1D2A648C005D258E /* RecordCenterViewController.m in Sources */,
 				27A65B051D2660AA0060D6B9 /* MWTribeSegmentedControl.m in Sources */,
 				2B6AE7F21D24EEBF00AE7783 /* registerViewController.m in Sources */,
 				2B23ACAF1D25041100FE90EC /* loginViewController.m in Sources */,
+				27D5A96F1D2A64A0005D258E /* InvitatianMyTableViewCell.m in Sources */,
 				049781F81D21062200268AFC /* TopViewTableViewCell.m in Sources */,
 				2B0EC08B1D1BE07400A2C866 /* messageViewController.m in Sources */,
 				2B87C5C01D1FC629001954F1 /* searchView.m in Sources */,
 				27A65B021D264DA60060D6B9 /* UserInfoTableViewCell.m in Sources */,
+				27D5A96C1D2A648C005D258E /* InvitatianMyViewController.m in Sources */,
 				2B6AE7F91D24FAF300AE7783 /* pushAndDismissView.m in Sources */,
 				2B0EC0711D1BDF9F00A2C866 /* AppDelegate.m in Sources */,
 				2B0EC03B1D1BDF5800A2C866 /* main.m in Sources */,
