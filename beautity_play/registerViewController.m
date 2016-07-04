@@ -129,8 +129,7 @@
                 [userdefaults setObject:dic forKey:@"registerAccount"];
                 [userdefaults synchronize];
                 getNumberViewController * getnumber = [[getNumberViewController alloc]init];
-                [self.navigationController pushViewController:getnumber animated:YES];
-                
+                [self presentViewController:getnumber animated:YES completion:nil];
             }else{
                 [self showMessage:@"密码太过简短不安全"];
             }
