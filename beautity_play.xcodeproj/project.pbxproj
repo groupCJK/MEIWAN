@@ -368,8 +368,8 @@
 				2B0EC0821D1BE07400A2C866 /* mineViewController.h */,
 				2B0EC0831D1BE07400A2C866 /* mineViewController.m */,
 				0414CC571D2362CE0099FE61 /* Model */,
-				0414CC3B1D22707F0099FE61 /* View */,
 				0414CC3C1D2270810099FE61 /* Controller */,
+				0414CC3B1D22707F0099FE61 /* View */,
 			);
 			name = "个人";
 			sourceTree = "<group>";
