@@ -10,6 +10,8 @@
 #import "CJKNavigationView.h"
 #import "headerName.pch"
 #import "publicHeader.h"
+#import "PlayerInfoViewController.h"
+
 @interface nearViewController ()<CJKNavigationViewDelegate,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegateWaterfallLayout,UICollectionViewDataSource,firstPage_scrollViewCellDelegate,searchViewDelegate>
 {
     UICollectionViewWaterfallLayout * _layout;
@@ -149,6 +151,10 @@
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    PlayerInfoViewController *plaerInfoCtr = [[PlayerInfoViewController alloc] init];
+    plaerInfoCtr.title = @"Ta的资料";
+    [self presentViewController:plaerInfoCtr animated:YES completion:nil];
+
     NSLog(@"瀑布流 选择第%ld个",(long)indexPath.item);
 }
 #pragma mark - UICollectionViewDelegateWaterfallLayout

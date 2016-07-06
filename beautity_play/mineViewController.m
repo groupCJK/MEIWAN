@@ -9,9 +9,10 @@
 #import "mineViewController.h"
 #import "headerName.pch"
 #import "CJKNavigationView.h"
-
-#import "RecordCenterViewController.h"
 #import "UserInfoViewController.h"
+#import "RecordCenterViewController.h"
+#import "PlayerAuditViewController.h"
+#import "UserWalletViewController.h"
 
 #import "MineViewTableViewCell.h"
 
@@ -20,17 +21,20 @@
 @property (nonatomic, strong)UITableView *mineTableView;
 @property (nonatomic, strong)NSArray *dataSource;
 @property (nonatomic, strong)UIView *headView;
-@property (nonatomic, strong) UIView *clearView;
+@property (nonatomic, strong)UIView *clearView;
 @property (nonatomic, strong)UIView *editView;
+@property (nonatomic, strong)UIButton *opinitonBtn;
 
 @end
 
 @implementation mineViewController
 
 
+
 -(void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = YES;
+    self.editView.hidden = YES;
 }
 
 - (void)viewDidLoad {
@@ -53,6 +57,7 @@
     baseView.delegate = self;
     baseView.leftButton.hidden = YES;
     [baseView.rightButton setImage:[UIImage imageNamed:@"list_2"] forState:UIControlStateNormal];
+    baseView.rightButton.selected = YES;
     
     [self.view addSubview:baseView];
 }
@@ -95,6 +100,14 @@
         UserInfoViewController *userInfoCtr = [[UserInfoViewController alloc] init];
         userInfoCtr.title = @"个人资料";
         [self presentViewController:userInfoCtr animated:YES completion:nil];
+    }else if (indexPath.row == 2){
+        PlayerAuditViewController *playerAuditCtr = [[PlayerAuditViewController alloc] init];
+        playerAuditCtr.title = @"达人审核";
+        [self presentViewController:playerAuditCtr animated:YES completion:nil];
+    }else if (indexPath.row == 3){
+        UserWalletViewController *userWalletCtr = [[UserWalletViewController alloc] init];
+        userWalletCtr.title = @"我的钱包";
+        [self presentViewController:userWalletCtr animated:YES completion:nil];
     }else if (indexPath.row == 4){
         RecordCenterViewController *recordCtr = [[RecordCenterViewController alloc] init];
         recordCtr.title = @"纪录中心";
@@ -129,7 +142,6 @@
         headImageGesture.numberOfTapsRequired = 1;
         [userHeadImage addGestureRecognizer:headImageGesture];
         
-        
         UILabel *userName = [[UILabel alloc] initWithFrame:CGRectMake(userHeadImage.frame.origin.x+userHeadImage.frame.size.width+15, (userHeadImage.frame.size.height+10)/2, 90, 20)];
         userName.text = @"老储";
         [_headView addSubview:userName];
@@ -159,7 +171,7 @@
                       @{@"image":@"order",
                         @"title":@"纪录中心"},
                       @{@"image":@"wangzhe",
-                        @"title":@"战绩查询"}];
+                        @"title":@"关于美玩"}];
     self.dataSource = @[data];
 }
 
@@ -175,28 +187,34 @@
 }
 -(void)rightButtonClick:(UIButton *)sender
 {
-    self.editView = [[UIView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-120, 55, 120, 40)];
-    self.editView.backgroundColor = [UIColor grayColor];
-    self.editView.layer.cornerRadius = 5;
-    self.editView.layer.masksToBounds = YES;
-    [self.view addSubview:self.editView];
-    
-    UIButton *opinitonBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120, 40)];
-    opinitonBtn.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    [opinitonBtn addTarget:self action:@selector(touchOpinitonBtn) forControlEvents:UIControlEventTouchUpInside];
-    UIImageView *opinitonIg = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 20, 20)];
-    opinitonIg.image = [UIImage imageNamed:@"peiwan_close"];
-    UILabel *opinitonLab = [[UILabel alloc]initWithFrame:CGRectMake(opinitonIg.frame.origin.x+opinitonIg.frame.size.width+10, 10, 120, 20)];
-    opinitonLab.text = @"退出登录";
-    [opinitonBtn addSubview:opinitonIg];
-    [opinitonBtn addSubview:opinitonLab];
-    [self.editView addSubview:opinitonBtn];
-    
-    NSLog(@"右");
+    static int i = 0;
+    i++;
+    if (i%2==1) {
+        self.editView = [[UIView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-120, 55, 120, 40)];
+        self.editView.backgroundColor = [UIColor grayColor];
+        self.editView.layer.cornerRadius = 5;
+        self.editView.layer.masksToBounds = YES;
+        [self.view addSubview:self.editView];
+        
+        self.opinitonBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 120, 40)];
+        self.opinitonBtn.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [self.opinitonBtn addTarget:self action:@selector(touchOpinitonBtn:) forControlEvents:UIControlEventTouchUpInside];
+        UIImageView *opinitonIg = [[UIImageView alloc]initWithFrame:CGRectMake(10, 10, 20, 20)];
+        opinitonIg.image = [UIImage imageNamed:@"peiwan_close"];
+        UILabel *opinitonLab = [[UILabel alloc]initWithFrame:CGRectMake(opinitonIg.frame.origin.x+opinitonIg.frame.size.width+10, 10, 120, 20)];
+        opinitonLab.text = @"退出登录";
+        [self.opinitonBtn addSubview:opinitonIg];
+        [self.opinitonBtn addSubview:opinitonLab];
+        [self.editView addSubview:self.opinitonBtn];
+        self.editView.hidden = NO;
+    }else{
+        self.editView.hidden = YES;
+        [self.view reloadInputViews];
+    }
 }
 
--(void)touchOpinitonBtn{
-    NSLog(@"___退出登录");
+-(void)touchOpinitonBtn:(UIButton *)sender{
+    NSLog(@"退出登录");
 }
 
 #pragma mark----状态栏
