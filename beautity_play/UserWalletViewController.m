@@ -27,7 +27,7 @@
     pushAndDismissView * naview = [[pushAndDismissView alloc]initWithFrame:CGRectMake(0, 20, width_screen, 44)];
     naview.delegate = self;
     naview.titleLabel.text = @"个人资料";
-    NSLog(@"%u",naview.titleLabel.text.length);
+    NSLog(@"%lu",naview.titleLabel.text.length);
     naview.finished.hidden = YES;
     [self.view addSubview:naview];
     // Do any additional setup after loading the view.

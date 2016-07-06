@@ -24,7 +24,7 @@
     pushAndDismissView * naview = [[pushAndDismissView alloc]initWithFrame:CGRectMake(0, 20, width_screen, 44)];
     naview.delegate = self;
     naview.titleLabel.text = @"达人认证";
-    NSLog(@"%u",naview.titleLabel.text.length);
+    NSLog(@"%lu",naview.titleLabel.text.length);
     [naview.finished setTitle:@"提交" forState:UIControlStateNormal];
     [self.view addSubview:naview];
     // Do any additional setup after loading the view from its nib.

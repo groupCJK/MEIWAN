@@ -17,9 +17,10 @@
 		271A800E1D2C950000FA6A07 /* UserWalletTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A800D1D2C950000FA6A07 /* UserWalletTableViewCell.m */; };
 		271A80111D2C958B00FA6A07 /* PlayerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A80101D2C958B00FA6A07 /* PlayerInfoViewController.m */; };
 		271A80141D2C959500FA6A07 /* playerInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A80131D2C959500FA6A07 /* playerInfoTableViewCell.m */; };
+		271A80191D2C995500FA6A07 /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A80161D2C995500FA6A07 /* CAPSPageMenu.m */; };
+		271A801A1D2C995500FA6A07 /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A80171D2C995500FA6A07 /* JSBadgeView.m */; };
 		27A65AFF1D264D8F0060D6B9 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */; };
 		27A65B021D264DA60060D6B9 /* UserInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */; };
-		27A65B051D2660AA0060D6B9 /* MWTribeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A65B031D2660A90060D6B9 /* MWTribeSegmentedControl.m */; };
 		27D5A96A1D2A648C005D258E /* RecordCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5A9651D2A648C005D258E /* RecordCenterViewController.m */; };
 		27D5A96B1D2A648C005D258E /* MyRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5A9671D2A648C005D258E /* MyRecordViewController.m */; };
 		27D5A96C1D2A648C005D258E /* InvitatianMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D5A9691D2A648C005D258E /* InvitatianMyViewController.m */; };
@@ -90,12 +91,14 @@
 		271A80101D2C958B00FA6A07 /* PlayerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerInfoViewController.m; sourceTree = "<group>"; };
 		271A80121D2C959500FA6A07 /* playerInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playerInfoTableViewCell.h; sourceTree = "<group>"; };
 		271A80131D2C959500FA6A07 /* playerInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = playerInfoTableViewCell.m; sourceTree = "<group>"; };
+		271A80151D2C995500FA6A07 /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPSPageMenu.h; sourceTree = "<group>"; };
+		271A80161D2C995500FA6A07 /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
+		271A80171D2C995500FA6A07 /* JSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBadgeView.m; sourceTree = "<group>"; };
+		271A80181D2C995500FA6A07 /* JSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBadgeView.h; sourceTree = "<group>"; };
 		27A65AFD1D264D8F0060D6B9 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		27A65AFE1D264D8F0060D6B9 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
 		27A65B001D264DA60060D6B9 /* UserInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoTableViewCell.h; sourceTree = "<group>"; };
 		27A65B011D264DA60060D6B9 /* UserInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoTableViewCell.m; sourceTree = "<group>"; };
-		27A65B031D2660A90060D6B9 /* MWTribeSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTribeSegmentedControl.m; sourceTree = "<group>"; };
-		27A65B041D2660A90060D6B9 /* MWTribeSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTribeSegmentedControl.h; sourceTree = "<group>"; };
 		27D5A9641D2A648C005D258E /* RecordCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordCenterViewController.h; sourceTree = "<group>"; };
 		27D5A9651D2A648C005D258E /* RecordCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordCenterViewController.m; sourceTree = "<group>"; };
 		27D5A9661D2A648C005D258E /* MyRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRecordViewController.h; sourceTree = "<group>"; };
@@ -245,8 +248,10 @@
 		0414CC411D235C6B0099FE61 /* helper */ = {
 			isa = PBXGroup;
 			children = (
-				27A65B041D2660A90060D6B9 /* MWTribeSegmentedControl.h */,
-				27A65B031D2660A90060D6B9 /* MWTribeSegmentedControl.m */,
+				271A80151D2C995500FA6A07 /* CAPSPageMenu.h */,
+				271A80161D2C995500FA6A07 /* CAPSPageMenu.m */,
+				271A80171D2C995500FA6A07 /* JSBadgeView.m */,
+				271A80181D2C995500FA6A07 /* JSBadgeView.h */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -708,12 +713,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271A801A1D2C995500FA6A07 /* JSBadgeView.m in Sources */,
 				2BB4D5591D23BF820004BFA9 /* dynamicTableViewCell.m in Sources */,
 				2B0EC08A1D1BE07400A2C866 /* nearViewController.m in Sources */,
+				271A80191D2C995500FA6A07 /* CAPSPageMenu.m in Sources */,
 				2B0EC0721D1BDF9F00A2C866 /* ViewController.m in Sources */,
 				27D5A96B1D2A648C005D258E /* MyRecordViewController.m in Sources */,
 				27D5A96A1D2A648C005D258E /* RecordCenterViewController.m in Sources */,
-				27A65B051D2660AA0060D6B9 /* MWTribeSegmentedControl.m in Sources */,
 				2B6AE7F21D24EEBF00AE7783 /* registerViewController.m in Sources */,
 				2B23ACAF1D25041100FE90EC /* loginViewController.m in Sources */,
 				27D5A96F1D2A64A0005D258E /* InvitatianMyTableViewCell.m in Sources */,

@@ -59,6 +59,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)finishClick:(UIButton *)sender
+{
+    
+}
+
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
