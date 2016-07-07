@@ -63,8 +63,9 @@
     NSDictionary *dic = sectionArray[indexPath.row];
     cell.userInfoTitle.text = dic[@"title"];
     if (indexPath.row == 0) {
-        cell.userInfoEdit.text = @"事故";
+        cell.userInfoEdit.text = @"";
         cell.userInfoEdit.hidden = NO;
+        [cell.userInfoEdit addTarget:self action:@selector(userInfoEdit:) forControlEvents:UIControlEventEditingChanged];
     }else if (indexPath.row == 1){
         cell.userInfoDetail.text = @"12331";
     }else if (indexPath.row == 2){
@@ -75,8 +76,10 @@
         cell.userInfoDetail.text = @"300";
         cell.userInfoDetail.textColor = [UIColor redColor];
     }else if (indexPath.row == 5){
-        cell.userInfoEdit.hidden = NO;
-        cell.userInfoEdit.text = @"开心时就笑吧，不开心的时候就等会再笑";
+        cell.userInfoEdit.hidden = YES;
+        cell.userInfoEditSign.hidden = NO;
+        cell.userInfoEditSign.text = @"";
+        [cell.userInfoEditSign addTarget:self action:@selector(userInfoEditSign:) forControlEvents:UIControlEventEditingChanged];
     }else if (indexPath.row == 6){
         cell.userInfoDetail.text = @"标签";
     }
@@ -85,9 +88,33 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+- (void)userInfoEditSign:(UITextField *)textField
+{
+    if (textField.text.length > 20) {
+        textField.text = [textField.text substringToIndex:20];
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"提示" message:@"签名不能多于20个字符串" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alertview show];
+    }
+    
+    NSLog(@"%lu",textField.text.length);
+}
+
+
+- (void)userInfoEdit:(UITextField *)textField
+{
+    if (textField.text.length > 6) {
+        textField.text = [textField.text substringToIndex:6];
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"提示" message:@"昵称不能大于六个字符串" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alertview show];
+    }
+    
+    NSLog(@"%lu",textField.text.length);
+}
+
 
 - (UITableView *)userInfoTableView{
     if (!_userInfoTableView) {
@@ -111,10 +138,11 @@
         userInfoHead.layer.cornerRadius = 45;
         [_userInfoHeadView addSubview:userInfoHead];
         
-        UILabel *prompt = [[UILabel alloc] initWithFrame:CGRectMake(userInfoHead.frame.origin.x+userInfoHead.frame.size.height+2,userInfoHead.frame.origin.y+userInfoHead.frame.size.width-10,60,10)];
-        prompt.text = @"更换头像";
-        prompt.textColor = NavColor;
-        prompt.font = [UIFont systemFontOfSize:12];
+        UIButton *prompt = [[UIButton alloc] initWithFrame:CGRectMake(userInfoHead.frame.origin.x+userInfoHead.frame.size.height+2,userInfoHead.frame.origin.y+userInfoHead.frame.size.width-10,60,10)];
+        [prompt setTitle:@"更换头像" forState:UIControlStateNormal];
+        [prompt setTitleColor:NavColor forState:UIControlStateNormal];
+        prompt.titleLabel.font = [UIFont systemFontOfSize:12.0f];
+        [prompt addTarget:self action:@selector(didTipPromptButton:) forControlEvents:UIControlEventTouchDownRepeat];
         [_userInfoHeadView addSubview:prompt];
         
     }
@@ -131,6 +159,12 @@
                       @{@"title":@"标签:"}];
     self.dataSource = @[data];
 }
+
+- (void)didTipPromptButton:(UIButton *)sender{
+    NSLog(@"点击更换头像");
+}
+
+#pragma mark ---- pushAndDismissView代理
 
 -(void)backPoPView:(UIButton *)sender
 {
@@ -153,13 +187,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

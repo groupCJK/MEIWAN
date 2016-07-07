@@ -15,19 +15,15 @@
 @property (nonatomic, strong)UIView *editView;
 @property (nonatomic, strong)UIButton *reportBtn;
 @property (nonatomic, strong)UIButton *addFriend;
+@property (nonatomic, strong)UIButton *blacklist;
 
 @end
 
 @implementation PlayerInfoViewController
 
--(void)viewWillAppear:(BOOL)animated
-{
-    self.editView.hidden = YES;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     pushAndDismissView * naview = [[pushAndDismissView alloc]initWithFrame:CGRectMake(0, 20, width_screen, 44)];
     naview.delegate = self;
     naview.titleLabel.text = @"玩家资料";
@@ -100,7 +96,7 @@
     static int i = 0;
     i++;
     if (i%2==1) {
-        self.editView = [[UIView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-80, 55, 80, 61)];
+        self.editView = [[UIView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-80, 55, 80, 92)];
         self.editView.backgroundColor = [UIColor whiteColor];
         self.editView.layer.cornerRadius = 5;
         self.editView.layer.masksToBounds = YES;
@@ -127,10 +123,23 @@
         [self.addFriend addTarget:self action:@selector(didTipAddFriendBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self.editView addSubview:self.addFriend];
         
+        self.blacklist = [[UIButton alloc] initWithFrame:CGRectMake(0, 62, 80, 30)];
+        self.blacklist.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [self.blacklist setTitle:@"黑名单" forState:UIControlStateNormal];
+        [self.blacklist setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.blacklist setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        self.blacklist.backgroundColor = NavColor;
+        self.blacklist.titleLabel.font = [UIFont systemFontOfSize:12.0f];
+        [self.blacklist addTarget:self action:@selector(didTipAddblacklistBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [self.editView addSubview:self.blacklist];
     }else{
         self.editView.hidden = YES;
         [self.view reloadInputViews];
     }
+}
+
+-(void)didTipAddblacklistBtn:(UIButton *)sender{
+    //加入黑名单
 }
 
 -(void)didTipReportBtn:(UIButton *)sender{
@@ -152,13 +161,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

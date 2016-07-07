@@ -15,6 +15,7 @@
 @property (nonatomic, strong)UIButton *manButton;
 @property (nonatomic, strong)UIButton *WomanButton;
 @property (nonatomic, strong)UITextField *userInfoEdit;
+@property (nonatomic, strong)UITextField *userInfoEditSign;
 @property (nonatomic, strong)UILabel *line;
 
 @end

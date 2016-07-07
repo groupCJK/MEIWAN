@@ -33,8 +33,11 @@
 - (void)creat_navigationView
 {
     CJKNavigationView * baseView = [[CJKNavigationView alloc]initWithFrame:CGRectMake(0, 20, width_screen, 35)];
+    baseView.leftButton.hidden = YES;
     baseView.titleLabel.text = @"动态";
     baseView.delegate = self;
+    [baseView.rightButton setTitle:@"..." forState:UIControlStateNormal];
+    [baseView.rightButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:baseView];
 }
 - (void)creat_tableView
