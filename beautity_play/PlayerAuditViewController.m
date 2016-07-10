@@ -8,7 +8,7 @@
 
 #import "PlayerAuditViewController.h"
 
-@interface PlayerAuditViewController ()<pushAndDismissViewDelegate>
+@interface PlayerAuditViewController ()<pushAndDismissViewDelegate,UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *time;
 @property (weak, nonatomic) IBOutlet UITextField *address;
@@ -108,19 +108,36 @@
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *home1Action = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:nil];
-    [alertController addAction:home1Action];
-    UIAlertAction *home2Action = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:nil];
-    [alertController addAction:home2Action];
+    [alertController addAction: [UIAlertAction actionWithTitle: @"拍照" style: UIAlertActionStyleDefault handler:^(UIAlertAction *home1Action) {
+        //处理点击拍照
+        NSLog(@"拍照");
+    }]];
     
+    [alertController addAction: [UIAlertAction actionWithTitle: @"相册" style: UIAlertActionStyleDefault handler:^(UIAlertAction *home2Action) {
+        //处理点击拍照
+        NSLog(@"相册");
+    }]];
     
-    //取消style:UIAlertActionStyleDefault
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
-    [alertController addAction:cancelAction];
+    [alertController addAction: [UIAlertAction actionWithTitle: @"取消" style: UIAlertActionStyleDefault handler:^(UIAlertAction *cancelAction) {
+        //处理点击拍照
+        NSLog(@"取消");
+    }]];
     
     [self presentViewController:alertController animated:YES completion:nil];
     
     
+//    UIAlertAction *home1Action = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:nil];
+//    [alertController addAction:home1Action];
+    
+
+    
+//    UIAlertAction *home2Action = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:nil];
+//    [alertController addAction:home2Action];
+
+    //取消style:UIAlertActionStyleDefault
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+//    [alertController addAction:cancelAction];
+
 }
 
 - (void)didTapAddPhoto2:(UIGestureRecognizer *)recognizer{
@@ -128,14 +145,28 @@
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *home1Action = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:nil];
-    [alertController addAction:home1Action];
-    UIAlertAction *home2Action = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:nil];
-    [alertController addAction:home2Action];
+//    UIAlertAction *home1Action = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:nil];
+//    [alertController addAction:home1Action];
+//    UIAlertAction *home2Action = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:nil];
+//    [alertController addAction:home2Action];
+//    
+//    //取消style:UIAlertActionStyleDefault
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+//    [alertController addAction:cancelAction];
+    [alertController addAction: [UIAlertAction actionWithTitle: @"拍照" style: UIAlertActionStyleDefault handler:^(UIAlertAction *home1Action) {
+        //处理点击拍照
+        NSLog(@"拍照2");
+    }]];
     
-    //取消style:UIAlertActionStyleDefault
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
-    [alertController addAction:cancelAction];
+    [alertController addAction: [UIAlertAction actionWithTitle: @"相册" style: UIAlertActionStyleDefault handler:^(UIAlertAction *home2Action) {
+        //处理点击拍照
+        NSLog(@"相册2");
+    }]];
+    
+    [alertController addAction: [UIAlertAction actionWithTitle: @"取消" style: UIAlertActionStyleDefault handler:^(UIAlertAction *cancelAction) {
+        //处理点击拍照
+        NSLog(@"取消2");
+    }]];
     
     [self presentViewController:alertController animated:YES completion:nil];
     

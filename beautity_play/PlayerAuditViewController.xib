@@ -60,12 +60,12 @@
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" tag="803" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="填写详细地址" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zax-On-1oc">
-                    <rect key="frame" x="120" y="160" width="76" height="20"/>
+                    <rect key="frame" x="120" y="160" width="168" height="20"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" tag="804" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="填写联系电话" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pVp-J1-uhJ">
-                    <rect key="frame" x="120" y="201" width="76" height="21"/>
+                    <rect key="frame" x="120" y="201" width="168" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </textField>
