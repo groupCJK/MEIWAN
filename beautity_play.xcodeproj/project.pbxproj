@@ -51,6 +51,8 @@
 		2B6AE7F91D24FAF300AE7783 /* pushAndDismissView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AE7F81D24FAF300AE7783 /* pushAndDismissView.m */; };
 		2B87C5C01D1FC629001954F1 /* searchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C5BF1D1FC629001954F1 /* searchView.m */; };
 		2BB4D5591D23BF820004BFA9 /* dynamicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D5581D23BF820004BFA9 /* dynamicTableViewCell.m */; };
+		2BDFA9421D31E7F500E33681 /* CorlorTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFA9411D31E7F500E33681 /* CorlorTransform.m */; };
+		2BDFA9451D31F17600E33681 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFA9441D31F17600E33681 /* MZTimerLabel.m */; };
 		5EDC7C1D2370AC9FF75FD571 /* libPods-beautity_play.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B7FA3587953CB9BD70FE /* libPods-beautity_play.a */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +163,10 @@
 		2B87C5BF1D1FC629001954F1 /* searchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchView.m; sourceTree = "<group>"; };
 		2BB4D5571D23BF820004BFA9 /* dynamicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamicTableViewCell.h; sourceTree = "<group>"; };
 		2BB4D5581D23BF820004BFA9 /* dynamicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dynamicTableViewCell.m; sourceTree = "<group>"; };
+		2BDFA9401D31E7F500E33681 /* CorlorTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorlorTransform.h; sourceTree = "<group>"; };
+		2BDFA9411D31E7F500E33681 /* CorlorTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorlorTransform.m; sourceTree = "<group>"; };
+		2BDFA9431D31F17600E33681 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
+		2BDFA9441D31F17600E33681 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
 		6DFBAE528D695359BE570FA8 /* Pods-beautity_play.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beautity_play.release.xcconfig"; path = "Pods/Target Support Files/Pods-beautity_play/Pods-beautity_play.release.xcconfig"; sourceTree = "<group>"; };
 		BE44B7FA3587953CB9BD70FE /* libPods-beautity_play.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beautity_play.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18DE250D3F3F594F840EE96 /* Pods-beautity_play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beautity_play.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beautity_play/Pods-beautity_play.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,6 +317,10 @@
 				2B0EC06F1D1BDF9F00A2C866 /* ViewController.m */,
 				2B556D101D1F681F0070F2AE /* UICollectionViewWaterfallLayout.h */,
 				2B556D111D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m */,
+				2BDFA9401D31E7F500E33681 /* CorlorTransform.h */,
+				2BDFA9411D31E7F500E33681 /* CorlorTransform.m */,
+				2BDFA9431D31F17600E33681 /* MZTimerLabel.h */,
+				2BDFA9441D31F17600E33681 /* MZTimerLabel.m */,
 				2B0EC08F1D1BE14200A2C866 /* CJKView */,
 				2B0EC07D1D1BE07400A2C866 /* headerName.pch */,
 				2B6AE7EF1D24EE6500AE7783 /* 登陆注册 */,
@@ -720,6 +730,7 @@
 				2B0EC0721D1BDF9F00A2C866 /* ViewController.m in Sources */,
 				27D5A96B1D2A648C005D258E /* MyRecordViewController.m in Sources */,
 				27D5A96A1D2A648C005D258E /* RecordCenterViewController.m in Sources */,
+				2BDFA9451D31F17600E33681 /* MZTimerLabel.m in Sources */,
 				2B6AE7F21D24EEBF00AE7783 /* registerViewController.m in Sources */,
 				2B23ACAF1D25041100FE90EC /* loginViewController.m in Sources */,
 				27D5A96F1D2A64A0005D258E /* InvitatianMyTableViewCell.m in Sources */,
@@ -748,6 +759,7 @@
 				271A800A1D2C94F600FA6A07 /* UserWalletViewController.m in Sources */,
 				271A80141D2C959500FA6A07 /* playerInfoTableViewCell.m in Sources */,
 				2B556D121D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m in Sources */,
+				2BDFA9421D31E7F500E33681 /* CorlorTransform.m in Sources */,
 				2B556D1E1D1F6F320070F2AE /* CJKCollectionViewCell.m in Sources */,
 				2B0AC8621D1D2A17009E953F /* stateView.m in Sources */,
 			);

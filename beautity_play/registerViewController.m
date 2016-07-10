@@ -115,6 +115,10 @@
 -(void)registerAction:(UIButton *)sender
 {
 
+    getNumberViewController * getnumber = [[getNumberViewController alloc]init];
+    //                UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:getnumber];
+    [self presentViewController:getnumber animated:YES completion:nil];
+    
     if ([textfiledOne.text isEqualToString:@""]||[textfiledTwo.text isEqualToString:@""]) {
         [self showMessage:@"手机号码或密码为空"];
     }else{
@@ -129,6 +133,7 @@
                 [userdefaults setObject:dic forKey:@"registerAccount"];
                 [userdefaults synchronize];
                 getNumberViewController * getnumber = [[getNumberViewController alloc]init];
+//                UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:getnumber];
                 [self presentViewController:getnumber animated:YES completion:nil];
             }else{
                 [self showMessage:@"密码太过简短不安全"];

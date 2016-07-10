@@ -27,6 +27,8 @@
 #import "loginViewController.h"
 #import "pushAndDismissView.h"
 #import "getNumberViewController.h"
+#import "CorlorTransform.h"
+#import "MZTimerLabel.h"
 
 #define height_screen [UIScreen mainScreen].bounds.size.height
 #define width_screen [UIScreen mainScreen].bounds.size.width
