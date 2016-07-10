@@ -315,12 +315,7 @@
 				2B0EC06D1D1BDF9F00A2C866 /* AppDelegate.m */,
 				2B0EC06E1D1BDF9F00A2C866 /* ViewController.h */,
 				2B0EC06F1D1BDF9F00A2C866 /* ViewController.m */,
-				2B556D101D1F681F0070F2AE /* UICollectionViewWaterfallLayout.h */,
-				2B556D111D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m */,
-				2BDFA9401D31E7F500E33681 /* CorlorTransform.h */,
-				2BDFA9411D31E7F500E33681 /* CorlorTransform.m */,
-				2BDFA9431D31F17600E33681 /* MZTimerLabel.h */,
-				2BDFA9441D31F17600E33681 /* MZTimerLabel.m */,
+				2BDFA9461D31FADF00E33681 /* tool */,
 				2B0EC08F1D1BE14200A2C866 /* CJKView */,
 				2B0EC07D1D1BE07400A2C866 /* headerName.pch */,
 				2B6AE7EF1D24EE6500AE7783 /* 登陆注册 */,
@@ -521,6 +516,19 @@
 			children = (
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		2BDFA9461D31FADF00E33681 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				2B556D101D1F681F0070F2AE /* UICollectionViewWaterfallLayout.h */,
+				2B556D111D1F681F0070F2AE /* UICollectionViewWaterfallLayout.m */,
+				2BDFA9401D31E7F500E33681 /* CorlorTransform.h */,
+				2BDFA9411D31E7F500E33681 /* CorlorTransform.m */,
+				2BDFA9431D31F17600E33681 /* MZTimerLabel.h */,
+				2BDFA9441D31F17600E33681 /* MZTimerLabel.m */,
+			);
+			name = tool;
 			sourceTree = "<group>";
 		};
 		4AB1D5C5DFBC9E500A807146 /* Pods */ = {
