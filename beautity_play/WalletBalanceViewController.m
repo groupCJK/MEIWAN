@@ -37,11 +37,13 @@
     moneyLabel.font = [UIFont systemFontOfSize:54.0f];
     [blackView addSubview:moneyLabel];
     
-    withdrawalbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, moneyLabel.frame.origin.y+moneyLabel.frame.size.height+50, width_screen, 60)];
+    withdrawalbutton = [[UIButton alloc] initWithFrame:CGRectMake(34, moneyLabel.frame.origin.y+moneyLabel.frame.size.height+50, self.view.frame.size.width-68, 34)];
     [withdrawalbutton setTitleColor:NavColor forState:UIControlStateNormal];
     [withdrawalbutton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     [withdrawalbutton setTitle:@"提现" forState:UIControlStateNormal];
     withdrawalbutton.backgroundColor = [UIColor whiteColor];
+    withdrawalbutton.layer.cornerRadius = 7.0;
+    withdrawalbutton.layer.masksToBounds = YES;
     [blackView addSubview:withdrawalbutton];
     
     pushAndDismissView * naview = [[pushAndDismissView alloc]initWithFrame:CGRectMake(0, 20, width_screen, 44)];

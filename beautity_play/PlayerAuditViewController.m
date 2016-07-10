@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UIImageView *addPhoto1;
 @property (weak, nonatomic) IBOutlet UIImageView *addPhoto2;
+@property (weak, nonatomic) IBOutlet UILabel *SugaoLabel;
 @end
 
 @implementation PlayerAuditViewController
@@ -30,13 +31,47 @@
     
     [self loadSetTextDelegate];
     
+    NSString *agreement = @"当你使用本软件代表你同意";
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:agreement];
+    //设置：在0-3个单位长度内的内容显示成红色
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(10, 2)];
+    
+    UILabel *agreementLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.SugaoLabel.frame.origin.x, self.SugaoLabel.frame.origin.y+self.SugaoLabel.frame.size.height+20, 145, 20)];
+    agreementLabel.text = @"当你使用本软件代表你同意";
+    agreementLabel.attributedText = str;
+    agreementLabel.font = [UIFont systemFontOfSize:12.0f];
+    [self.view addSubview:agreementLabel];
+    
+    UIButton *agreementurlButton = [[UIButton alloc] initWithFrame:CGRectMake(agreementLabel.frame.origin.x+agreementLabel.frame.size.width, agreementLabel.frame.origin.y, 100, 20)];
+    agreementurlButton.titleLabel.font = [UIFont systemFontOfSize:12.0f];
+    [agreementurlButton setTitleColor:[UIColor greenColor] forState:UIControlStateHighlighted];
+    NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:@"《美玩达人协议》"];
+    NSRange titleRange = {0,[title length]};
+    [title addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:titleRange];
+    [agreementurlButton setAttributedTitle:title
+                                  forState:UIControlStateNormal];
+    [agreementurlButton addTarget:self action:@selector(didTapagreementUrl:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:agreementurlButton];
+    
+    UITapGestureRecognizer *addphone1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAddPhoto1:)];
+    self.addPhoto1.userInteractionEnabled = YES;
+    addphone1.numberOfTouchesRequired = 1; //手指数
+    addphone1.numberOfTapsRequired = 1; //tap次数
+    addphone1.delegate= self;
+    [self.addPhoto1 addGestureRecognizer:addphone1];
+    UITapGestureRecognizer *addphone2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAddPhoto2:)];
+    self.addPhoto2.userInteractionEnabled = YES;
+    addphone2.numberOfTouchesRequired = 1; //手指数
+    addphone2.numberOfTapsRequired = 1; //tap次数
+    addphone2.delegate= self;
+    [self.addPhoto2 addGestureRecognizer:addphone2];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)loadSetTextDelegate{
     self.time.textAlignment = NSTextAlignmentLeft;
     self.time.placeholder = @"(例如:看电影、玩游戏)";
-    [self.time setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [self.time setValue:[UIColor colorWithWhite:1 alpha:0.6] forKeyPath:@"_placeholderLabel.textColor"];
     [self.time setValue:[UIFont boldSystemFontOfSize:11.0f] forKeyPath:@"_placeholderLabel.font"];
     self.time.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     NSMutableParagraphStyle *style = [self.time.defaultTextAttributes[NSParagraphStyleAttributeName] mutableCopy];
@@ -47,7 +82,7 @@
     
     self.address.textAlignment = NSTextAlignmentLeft;
     self.address.placeholder = @"请填写详细地址";
-    [self.address setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [self.address setValue:[UIColor colorWithWhite:1 alpha:0.6]  forKeyPath:@"_placeholderLabel.textColor"];
     [self.address setValue:[UIFont boldSystemFontOfSize:11.0f] forKeyPath:@"_placeholderLabel.font"];
     self.address.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     NSMutableParagraphStyle *style2 = [self.address.defaultTextAttributes[NSParagraphStyleAttributeName] mutableCopy];
@@ -59,7 +94,7 @@
     self.phone.keyboardType = UIKeyboardTypeNamePhonePad;
     self.phone.textAlignment = NSTextAlignmentLeft;
     self.phone.placeholder = @"请输入正确的联系方式";
-    [self.phone setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [self.phone setValue:[UIColor colorWithWhite:1 alpha:0.6]  forKeyPath:@"_placeholderLabel.textColor"];
     [self.phone setValue:[UIFont boldSystemFontOfSize:11.0f] forKeyPath:@"_placeholderLabel.font"];
     self.phone.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     NSMutableParagraphStyle *style3 = [self.phone.defaultTextAttributes[NSParagraphStyleAttributeName] mutableCopy];
@@ -69,6 +104,55 @@
                                                                        attributes:@{NSParagraphStyleAttributeName : style3}];
 }
 
+- (void)didTapAddPhoto1:(UIGestureRecognizer *)recognizer{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *home1Action = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:home1Action];
+    UIAlertAction *home2Action = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:home2Action];
+    
+    
+    //取消style:UIAlertActionStyleDefault
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
+}
+
+- (void)didTapAddPhoto2:(UIGestureRecognizer *)recognizer{
+    
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *home1Action = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:home1Action];
+    UIAlertAction *home2Action = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:home2Action];
+    
+    //取消style:UIAlertActionStyleDefault
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+
+- (void)actionSheet:(UIAlertAction *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        NSLog(@"1");
+    }else if (buttonIndex == 1) {
+        NSLog(@"2");
+    }
+}
+- (void)didTapagreementUrl:(UIButton *)sender{
+    NSLog(@"美玩协议连接地址");
+}
+
 -(void)backPoPView:(UIButton *)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -76,6 +160,7 @@
 
 -(void)finishClick:(UIButton *)sender
 {
+    NSLog(@"提交");
     if (self.time.text.length != 0 && self.address.text.length != 0 && self.phone.text.length != 0) {
     }
 }
