@@ -10,14 +10,12 @@
 
 @protocol firstPage_scrollViewCellDelegate <NSObject>
 
-- (void)scrollImageViewClick:(UIGestureRecognizer *)gesture;
+- (void)buttonClick:(UIButton *)sender;
 
 @end
 
-@interface firstPage_scrollViewCell : UITableViewCell<UIScrollViewDelegate>
+@interface firstPage_scrollViewCell : UITableViewCell
 
-@property(nonatomic,strong)UIScrollView * scrollview;
-@property(nonatomic,strong)UIPageControl * pageControl;
 @property(nonatomic,weak)id<firstPage_scrollViewCellDelegate>delegate;
 
 @end

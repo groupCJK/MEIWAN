@@ -72,7 +72,7 @@
         self.locationLabel = locationLabel;
         //时间金钱
         UILabel * moneyAndHour = [[UILabel alloc]init];
-        moneyAndHour.text = @"39 美玩币/小时";
+        moneyAndHour.text = @"39元/小时";
         moneyAndHour.font = [UIFont systemFontOfSize:8.0];
         moneyAndHour.textColor = RGB(110, 110, 110);
         CGSize moneyAndHourSize = [moneyAndHour.text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:moneyAndHour.font,NSFontAttributeName, nil]];

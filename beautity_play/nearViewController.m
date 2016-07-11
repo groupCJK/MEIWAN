@@ -17,6 +17,10 @@
     UICollectionViewWaterfallLayout * _layout;
     UICollectionView * _collectionView;
     UITableView * _tableview;
+    NSArray * titlelabel;
+    NSArray * imageArray;
+    UIImageView * iconImageview;
+    UILabel * iconLabel;
 }
 @end
 
@@ -30,6 +34,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    titlelabel = @[@"线上点歌",@"视屏聊天",@"资深吃货",@"K歌达人",@"夜店达人",@"当地向导",@"影伴",@"外语陪练",@"LOL",@"全部"];
+    imageArray = @[@"sing",@"video-chat",@"dining",@"sing-expert",@"go-nightclubbing",@"guide",@"shadow-with",@"practices",@"lol",@"all"];
+
+    
     UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 20, width_screen, height_screen)];
     view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:view];
@@ -41,7 +49,7 @@
 #pragma mark----创建区
 -(void)tableView_creat
 {
-    _tableview  =[[UITableView alloc]initWithFrame:CGRectMake(0, 55, width_screen, height_screen-55-40) style:UITableViewStyleGrouped];
+    _tableview  =[[UITableView alloc]initWithFrame:CGRectMake(0, 55, width_screen, height_screen-95) style:UITableViewStyleGrouped];
     _tableview.delegate = self;
     _tableview.dataSource = self;
     _tableview.backgroundColor = baseColor;
@@ -83,13 +91,33 @@
         if (!cell) {
             cell = [[firstPage_scrollViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         }
+        cell.delegate = self;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
         
     }else{
         
         UITableViewCell * tableviewcell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+       
         if (!tableviewcell) {
             tableviewcell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+            
+             iconImageview = [[UIImageView alloc]initWithFrame:CGRectMake(width_screen/2-15-21, (40-21)/2, 21, 21)];
+            iconImageview.image = [UIImage imageNamed:@"all"];
+            [tableviewcell addSubview:iconImageview];
+            iconLabel = [[UILabel alloc]init];
+            iconLabel.font = Font(11.0);
+            iconLabel.text = @"全部";
+            iconLabel.textColor = [CorlorTransform colorWithHexString:@"#646464"];
+            iconLabel.frame = CGRectMake(iconImageview.frame.origin.x+iconImageview.frame.size.width+10, 0, 60, 40);
+            [tableviewcell addSubview:iconLabel];
+            
+            UIImageView * line_left = [[UIImageView alloc]initWithFrame:CGRectMake(0, 19.5, width_screen/3, 1)];
+            line_left.backgroundColor = [CorlorTransform colorWithHexString:@"#e7e7e7"];
+            [tableviewcell addSubview:line_left];
+            UIImageView * line_right = [[UIImageView alloc]initWithFrame:CGRectMake(width_screen-(width_screen/3), 19.5, width_screen/3, 1)];
+            line_right.backgroundColor = line_left.backgroundColor;
+            [tableviewcell addSubview:line_right];
             
             _layout = [[UICollectionViewWaterfallLayout alloc]init];
             _layout.columnCount = 2;//设置两列
@@ -97,7 +125,7 @@
             _layout.delegate = self;//通过代理设置item的高
             _layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);//设置区和四周边界的距离
             
-            _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:_layout];
+            _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 40, width_screen, tableviewcell.frame.size.height-40) collectionViewLayout:_layout];
             _collectionView.delegate = self;
             _collectionView.dataSource = self;
             _collectionView.backgroundColor = _tableview.backgroundColor;
@@ -110,17 +138,24 @@
         }
         tableviewcell.selectionStyle = UITableViewCellSelectionStyleNone;
         return tableviewcell;
-        
-        
     }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section==0) {
-        return 90;
+        return 161;
     }else{
         return _collectionView.contentSize.height+1;
     }
+}
+-(void)buttonClick:(UIButton *)sender
+{
+
+    iconLabel.text = [NSString stringWithFormat:@"%@",titlelabel[sender.tag]];
+    iconImageview.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageArray[sender.tag]]];
+    NSLog(@"%@",titlelabel[sender.tag]);
+    NSLog(@"结束刷新网络请求,参数iconText.tag");
+
 }
 #pragma mark----collectionView代理区
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
@@ -130,7 +165,6 @@
     CGRect frame = _collectionView.frame;
     frame.size.height = size.height;
     _collectionView.frame = frame;
-    
     [_tableview reloadData];
 }
 - (void)dealloc

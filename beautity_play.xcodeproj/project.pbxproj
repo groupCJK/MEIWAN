@@ -53,6 +53,7 @@
 		2BB4D5591D23BF820004BFA9 /* dynamicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D5581D23BF820004BFA9 /* dynamicTableViewCell.m */; };
 		2BDFA9421D31E7F500E33681 /* CorlorTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFA9411D31E7F500E33681 /* CorlorTransform.m */; };
 		2BDFA9451D31F17600E33681 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFA9441D31F17600E33681 /* MZTimerLabel.m */; };
+		2BDFA94A1D321B2B00E33681 /* settingHeaderImageAndSex.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFA9491D321B2B00E33681 /* settingHeaderImageAndSex.m */; };
 		5EDC7C1D2370AC9FF75FD571 /* libPods-beautity_play.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B7FA3587953CB9BD70FE /* libPods-beautity_play.a */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +168,8 @@
 		2BDFA9411D31E7F500E33681 /* CorlorTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorlorTransform.m; sourceTree = "<group>"; };
 		2BDFA9431D31F17600E33681 /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
 		2BDFA9441D31F17600E33681 /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
+		2BDFA9481D321B2B00E33681 /* settingHeaderImageAndSex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingHeaderImageAndSex.h; sourceTree = "<group>"; };
+		2BDFA9491D321B2B00E33681 /* settingHeaderImageAndSex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingHeaderImageAndSex.m; sourceTree = "<group>"; };
 		6DFBAE528D695359BE570FA8 /* Pods-beautity_play.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beautity_play.release.xcconfig"; path = "Pods/Target Support Files/Pods-beautity_play/Pods-beautity_play.release.xcconfig"; sourceTree = "<group>"; };
 		BE44B7FA3587953CB9BD70FE /* libPods-beautity_play.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-beautity_play.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18DE250D3F3F594F840EE96 /* Pods-beautity_play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beautity_play.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beautity_play/Pods-beautity_play.debug.xcconfig"; sourceTree = "<group>"; };
@@ -438,6 +441,7 @@
 			children = (
 				2B23ACB11D265FE600FE90EC /* getNumberViewController.h */,
 				2B23ACB21D265FE600FE90EC /* getNumberViewController.m */,
+				2BDFA9471D321B1000E33681 /* 设置 */,
 			);
 			name = "NEXT ViewController";
 			sourceTree = "<group>";
@@ -529,6 +533,15 @@
 				2BDFA9441D31F17600E33681 /* MZTimerLabel.m */,
 			);
 			name = tool;
+			sourceTree = "<group>";
+		};
+		2BDFA9471D321B1000E33681 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				2BDFA9481D321B2B00E33681 /* settingHeaderImageAndSex.h */,
+				2BDFA9491D321B2B00E33681 /* settingHeaderImageAndSex.m */,
+			);
+			name = "设置";
 			sourceTree = "<group>";
 		};
 		4AB1D5C5DFBC9E500A807146 /* Pods */ = {
@@ -757,6 +770,7 @@
 				2B0EC08E1D1BE07400A2C866 /* topViewController.m in Sources */,
 				2B0EC0881D1BE07400A2C866 /* MyTabbar.m in Sources */,
 				271A800E1D2C950000FA6A07 /* UserWalletTableViewCell.m in Sources */,
+				2BDFA94A1D321B2B00E33681 /* settingHeaderImageAndSex.m in Sources */,
 				2B0EC08C1D1BE07400A2C866 /* mineViewController.m in Sources */,
 				27A65AFF1D264D8F0060D6B9 /* UserInfoViewController.m in Sources */,
 				271A80111D2C958B00FA6A07 /* PlayerInfoViewController.m in Sources */,

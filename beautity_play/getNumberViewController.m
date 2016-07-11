@@ -7,6 +7,7 @@
 //
 
 #import "getNumberViewController.h"
+#import "settingHeaderImageAndSex.h"
 
 @interface getNumberViewController ()<pushAndDismissViewDelegate>
 {
@@ -47,7 +48,7 @@
     button.titleLabel.textAlignment = NSTextAlignmentRight;
     button.titleLabel.font = Font(12.0);
     [button setTitleColor:RGB(126, 206, 144) forState:UIControlStateNormal];
-    button.frame = CGRectMake( width_screen-100, 0, 90, 40);
+    button.frame = CGRectMake( width_screen-90, 0, 90, 40);
     [button addTarget:self action:@selector(cannotGetNumber) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview: button];
     [self.view addSubview:topView];
@@ -106,7 +107,7 @@
     loginButton.layer.cornerRadius = 5;
     loginButton.alpha = 0.55;
     [loginButton setTitle:@"下一步" forState:UIControlStateNormal];
-    loginButton.frame = CGRectMake(textFileImage.frame.origin.x, textFileImage.frame.origin.y+textFileImage.frame.size.height+65, textFileImage.frame.size.width, 40);
+    loginButton.frame = CGRectMake(textFileImage.frame.origin.x, textFileImage.frame.origin.y+textFileImage.frame.size.height+40, textFileImage.frame.size.width, 40);
     [loginButton addTarget:self action:@selector(registerAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
 }
@@ -119,10 +120,13 @@
 -(void)cannotGetNumber
 {
     NSLog(@"获取不到验证码");
+    
 }
 - (void)registerAction:(UIButton *)sender
 {
     NSLog(@"下一步");
+    settingHeaderImageAndSex * setting = [[settingHeaderImageAndSex alloc]init];
+    [self presentViewController:setting animated:YES completion:nil];
 }
 -(void)backPoPView:(UIButton *)sender
 {
