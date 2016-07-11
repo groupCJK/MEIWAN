@@ -15,6 +15,10 @@
 {
     UITableView * _tableView;
 }
+
+@property (nonatomic, strong)UIView *editView;
+@property (nonatomic, strong)UIButton *opinitonBtn;
+
 @end
 
 @implementation dynamicViewController
@@ -36,8 +40,8 @@
     baseView.leftButton.hidden = YES;
     baseView.titleLabel.text = @"动态";
     baseView.delegate = self;
-    [baseView.rightButton setTitle:@"..." forState:UIControlStateNormal];
-    [baseView.rightButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [baseView.rightButton setTitle:@"＋" forState:UIControlStateNormal];
+    [baseView.rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.view addSubview:baseView];
 }
 - (void)creat_tableView
@@ -74,7 +78,7 @@
 {
     return 0.1;
 }
-#pragma mark----tableview区头区尾自定义view
+
 #pragma mark----导航栏按钮函数
 -(void)leftButtonClick:(UIButton *)sender
 {
@@ -82,8 +86,36 @@
 }
 -(void)rightButtonClick:(UIButton *)sender
 {
-    NSLog(@"右");
+    static int i = 0;
+    i++;
+    if (i%2==1) {
+        self.editView = [[UIView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width-80, 55, 80, 30)];
+        self.editView.backgroundColor = [UIColor grayColor];
+        self.editView.layer.cornerRadius = 5;
+        self.editView.layer.masksToBounds = YES;
+        [self.view addSubview:self.editView];
+        
+        self.opinitonBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 30)];
+        self.opinitonBtn.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [self.opinitonBtn setTitle:@"发布动态" forState:UIControlStateNormal];
+        [self.opinitonBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.opinitonBtn setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        self.opinitonBtn.backgroundColor = NavColor;
+        self.opinitonBtn.titleLabel.font = [UIFont systemFontOfSize:12.0f];
+        [self.opinitonBtn addTarget:self action:@selector(didTipOpinitonBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [self.editView addSubview:self.opinitonBtn];
+        [self.editView addSubview:self.opinitonBtn];
+        self.editView.hidden = NO;
+    }else{
+        self.editView.hidden = YES;
+        [self.view reloadInputViews];
+    }
 }
+
+-(void)didTipOpinitonBtn:(UIButton *)sender{
+    NSLog(@"发布动态");
+}
+
 #pragma mark----状态栏
 -(UIStatusBarStyle)preferredStatusBarStyle
 {

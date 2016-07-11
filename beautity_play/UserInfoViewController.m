@@ -89,6 +89,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    if (indexPath.row == 1) {
+        NSLog(@"用户ID不能修改");
+    }else if (indexPath.row == 2){
+        NSLog(@"性别不能修改");
+    }else if (indexPath.row == 3){
+        NSLog(@"年龄不能修改");
+    }else if (indexPath.row == 4){
+        NSLog(@"热度不能修改");
+    }else if(indexPath.row == 6){
+        NSLog(@"选择标签");
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

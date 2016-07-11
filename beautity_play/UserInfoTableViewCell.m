@@ -20,7 +20,7 @@
         UITextField *editUserInfo = [[UITextField alloc] initWithFrame:CGRectMake(title.frame.origin.x+title.frame.size.width+5, (self.frame.size.height/2+title.frame.size.height/2)/2, self.frame.size.width-title.frame.size.width-15, 20)];
         editUserInfo.textAlignment = NSTextAlignmentLeft;
         editUserInfo.placeholder = @"请输入你的昵称，不大于六个字符";
-        [editUserInfo setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
+        [editUserInfo setValue:[UIColor colorWithWhite:0.5 alpha:0.5] forKeyPath:@"_placeholderLabel.textColor"];
         [editUserInfo setValue:[UIFont boldSystemFontOfSize:11.0f] forKeyPath:@"_placeholderLabel.font"];
         editUserInfo.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         NSMutableParagraphStyle *style = [editUserInfo.defaultTextAttributes[NSParagraphStyleAttributeName] mutableCopy];
@@ -36,7 +36,7 @@
         editsign.textAlignment = NSTextAlignmentLeft;
         editsign.placeholder = @"请输入你的签名，不大于二十个字符";
         [editsign setValue:[UIFont boldSystemFontOfSize:11.0f] forKeyPath:@"_placeholderLabel.font"];
-        [editsign setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
+        [editsign setValue:[UIColor colorWithWhite:0.5 alpha:0.5] forKeyPath:@"_placeholderLabel.textColor"];
         editsign.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         NSMutableParagraphStyle *signStyle = [editsign.defaultTextAttributes[NSParagraphStyleAttributeName] mutableCopy];
         signStyle.minimumLineHeight = editsign.font.lineHeight - (editsign.font.lineHeight - [UIFont systemFontOfSize:11.0f].lineHeight) / 2.0;
